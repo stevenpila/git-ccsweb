@@ -402,6 +402,7 @@
 	top: 100%;
 	left: 0px;
 	right: 0;
+	padding: 0.2em 0.72em 0.3em;
 	cursor: pointer;
 }
 .ccs-user-personal-information .label-danger:hover{

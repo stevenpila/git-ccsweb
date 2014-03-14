@@ -54,7 +54,7 @@
                                         <li><i class="ic-mail"></i>&nbsp;&nbsp;<span id="my-email"><?php echo $profile_details->email ?></span>
 
                                             <?php if($profile_details->validemail == 0 && $profile_details->profile_user_id == $this->authentication->user_id()){ ?>
-                                                <a id="validate-email" class="label label-danger">Click <strong><u>me</u></strong> to validate this email!</a>
+                                                <button id="validate-email" class="label label-danger" style="border: 0">Click <strong><u>me</u></strong> to validate this email!</button>
                                                 <br>
                                             <?php } ?>
                                         
@@ -322,6 +322,8 @@
                 },
                 dataType: 'json',
                 success: function(result) {
+                    el.removeAttr('disabled');
+                    
                     $('#toast-container > .toast-info:eq(0)').fadeOut(1000, function(){
                         $(this).remove();
                     });
@@ -458,10 +460,10 @@
             });
 
             toastr.options = {
-                "closeButton": true,
+                "closeButton": false,
                 "debug": false,
                 "positionClass": "toast-bottom-right",
-                "onclick": null,
+                "onclick": true,
                 "showDuration": "0",
                 "hideDuration": "0",
                 "timeOut": "0",

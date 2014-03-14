@@ -315,6 +315,10 @@ $(document).ready(function(){
 	            data: mydata,
 	            dataType: 'json',
 	            success: function(result) {
+	            	$('#toast-container > .toast-info:eq(0)').fadeOut(1000, function(){
+                        $(this).remove();
+                    });
+
 		            if(result.status == 1) {
 			            toastr.options = {
 			            	"closeButton": true,
@@ -441,11 +445,11 @@ $(document).ready(function(){
             	"closeButton": true,
                 "debug": false,
                 "positionClass": "toast-bottom-right",
-                "onclick": null,
+                "onclick": true,
                 "showDuration": "300",
                 "hideDuration": "1000",
-                "timeOut": "5000",
-                "extendedTimeOut": "1000",
+                "timeOut": false,
+                "extendedTimeOut": false,
                 "showEasing": "swing",
                 "hideEasing": "linear",
                 "showMethod": "fadeIn",
@@ -530,6 +534,10 @@ $(document).ready(function(){
 	                }
 	            },
 	            error: function(xhr,status,error) {
+	            	$('#toast-container > .toast-info:eq(0)').fadeOut(1000, function(){
+                        $(this).remove();
+                    });
+                    
 			        $('#forgot_password_modal').modal('hide');
 		            toastr.options = {
 		            	"closeButton": true,
