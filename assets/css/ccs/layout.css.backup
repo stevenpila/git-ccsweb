@@ -1,0 +1,131 @@
+.ccs-profile-services-vertical-menu{
+	/*position: absolute;*/
+	background: #222;
+	height: 100%;
+	left: 0;
+	top: 0;
+	color: #888;
+}
+
+.ccs-profile-image-container{
+    padding:10px 8px;
+    background: rgba(0,0,0,0.3);
+    border-bottom: 1px solid rgba(0,0,0,0.4);
+}
+.ccs-profile-services-vertical-menu .ccs-user-type{
+    font-size: 12.5px;
+    line-height: 3px;
+    color: #FF6000;
+    font-style: normal;
+}
+.ccs-profile-services-vertical-menu .ccs-menu-hide-show{
+	position: absolute;
+	right: 0;
+	top: 0;
+	font-size: 25px;
+	padding: 5px;
+	background: #fff;
+	color: #151515;
+}
+.css-vertical-menu-ul{
+    margin-left: -40px;
+    border-bottom: 5px solid rgba(0,0,0,0.1);
+    background: #222;
+    margin-bottom: 0;
+}
+.ccs-profile-services-vertical-menu ul li{
+	list-style: none;
+	width: 100%;
+}
+.ccs-profile-services-vertical-menu ul li > a{
+	display: block;
+	color: #888888;
+	text-decoration: none;
+	vertical-align: middle;
+	position: relative;
+}
+.ccs-profile-services-vertical-menu ul li > a input{
+	border: none;
+	background: transparent;
+	color: #fff;
+}
+.ccs-profile-services-vertical-menu ul li > a input::-webkit-input-placeholder{
+	color: #fff;
+}
+.ccs-profile-services-vertical-menu ul li > a input:-moz-placeholder { /* Firefox 18- */
+   color: #fff;  
+}
+
+.ccs-profile-services-vertical-menu ul li > a input::-moz-placeholder {  /* Firefox 19+ */
+   color: #fff;  
+}
+
+.ccs-profile-services-vertical-menu ul li > a input:-ms-input-placeholder {  
+   color: #fff;  
+}
+.ccs-profile-services-vertical-menu ul li > a i{
+	border-right: 1px solid rgba(0,0,0,0.4);
+	display: inline-block;
+	padding:14px 15px 12px;
+	font-size: 20px;
+	margin-right: 10px;
+}
+.active-li{
+	background: #009999;
+	color: #fff;
+}
+.ccs-profile-submenu ul li > a :before{
+	position: absolute;
+	content: "";
+	top: -9px;
+	left: -2px;
+	width: 25px;
+	height: 26px;
+	border-left: 2px solid transparent;
+	border-bottom: 2px solid rgba(205,205,205,0.2);
+}
+.ccs-profile-submenu ul li > .active :before{
+	border-left: 2px solid #009999;
+	border-bottom: 2px solid #009999;
+}
+.ccs-layout-content{
+	padding-left:250px;
+	position: relative;
+}
+.ccs-profile-submenu ul{
+	margin-left: -17px !important;
+}
+.ccs-profile-submenu{
+	box-shadow: inset 0px .5px 2px 0px rgba(0,0,0,0.2);
+	background: rgba(255,255,255,0.05);
+    position: relative;
+}
+.ccs-profile-submenu ul li > a{
+    padding: 5px 3px 5px 30px;
+    border-left: 2px solid rgba(205,205,205,0.2);
+}
+.ccs-content-container{
+	height: inherit;
+	background: #fff;
+}
+.ccs-profile-image.ccs-user-name-profile-picture {
+    display: inline-block;
+}
+.ccs-profile-image.ccs-user-name-profile-picture img {
+    height: 35px;
+    margin-right: 20px;
+    width: 35px;
+}
+.ccs-layout-container > .ccs-content-container > .ccs-service-container{
+    height: 100%;
+    background: linear-gradient(to bottom, #FF6000 0%, rgba(255, 116, 0, 0.79) 90%, rgba(255, 116, 0, 0.77) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+.ccs-layout-inner{
+    padding: 0;
+}
+
+@media(max-width: 723px){
+    .ccs-profile-services-vertical-menu{
+            height: 100%;
+    }
+}

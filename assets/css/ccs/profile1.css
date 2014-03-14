@@ -1,0 +1,304 @@
+.ccs-user-profile{
+}
+.ccs-user-activities{
+	text-align: right;
+	background: rgba(0,0,0,0.05);
+}
+.ccs-user-activities > ul{
+	padding: 0;
+	margin: 0;
+	color: #eaeaea;
+	display: inline-block;
+}
+.ccs-user-activities > ul li{
+	list-style: none;
+	width: 80px;
+	text-align: center;
+	display: inline-block;
+	padding:  10px 5px;
+	border: 2px solid #fff;
+	font-size: 11px;
+}
+.ccs-user-activities > ul li:not(:first-child){
+	margin-left: 40px;
+}
+.ccs-user-profile-user-type{
+	position: relative;
+	width: auto !important;
+	font-size: 18px;
+	color: #eee;
+	padding-top: 10px;
+	cursor: pointer;
+}
+.ccs-user-profile-user-type > ul{
+	
+	/*visibility: hidden;*/
+}
+.ccs-change-picture{
+        position: absolute;
+        bottom: -40px;
+        left:-40px;
+        background: #fff;
+        padding: 10px 20px;
+        color:#333;
+        cursor: pointer;
+}
+.ccs-user-type-employee {
+	position: absolute;
+	background: #f0f0f0;
+	text-align: left;
+	top: 100%;
+	font-size: 13px;
+	left: 15px;
+	width: 200px;
+	padding: 0;
+	z-index: 10;
+	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.176);
+	visibility: hidden;
+}
+.dropIt{
+	visibility: visible;
+	animation-name: flipInX;
+	animation-duration: 0.4s;
+    animation-fill-mode: both;
+}
+.ccs-divider{
+	background-color: #E5E5E5;
+    height: 1px;
+    margin: 0;
+    overflow: hidden;
+}
+.ccs-user-type-employee input{
+	border:none;
+	background: none;
+}
+.ccs-user-type-employee > ul{
+	padding: 0;
+}
+.ccs-user-type-employee > ul li{
+	list-style: none;
+	padding: 3px 10px;
+}
+.ccs-user-type-employee > ul li a{
+	text-decoration: none;
+	color: #222;
+}
+.ccs-user-activities-posts,
+.ccs-user-activities-comments,
+.ccs-user-activities-polls{
+	font-size: 18px;
+	line-height: 10px;
+	text-align: center;
+}
+.ccs-user-profile-header-container{
+	background: url(../../img/cover_photo_2.jpg) fixed no-repeat;
+}
+.ccs-user-profile-header-container-2{
+	background: rgba(255,96,0,0.8);
+	/*text-align: center;*/
+}
+.ccs-user-profile-header{
+	max-width: 800px;
+	margin: 0 auto;
+	padding-top: 10px;
+	min-width: 200px;
+	position: relative;
+}
+.ccs-user-profile-picture{
+	padding: 40px;
+	background: rgba(0,0,0,.9);
+        /*margin: 0 auto;*/
+        display: inline-block;
+}
+.ccs-user-profile-picture img{
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+	border-left: 5px solid #fff;
+	border-right: 5px solid #fff;
+	border-top: 5px solid #fff;
+}
+.ccs-user-information{
+	display: inline-block;
+	height: inherit;
+	text-align: left;
+}
+.ccs-user-information input{
+	background: rgba(0,0,0,0.05);
+        padding: 5px 3px;
+	border: none;
+	color: #fff;
+	width: 100%;
+}
+.ccs-user-information ul > li{
+    margin-top: 10px;
+    /*background: #000;*/
+}
+.ccs-user-information ul > li .input-group-addon{
+    background-color: rgba(0,0,0,1);
+    border: 0;
+    border-radius: 0;
+}
+.datepicker{
+    font-family: Arial, Verdana, sans-serif;
+    font-size: 12px;
+    border-radius: 0;
+}
+/*.datepicker{
+    color: #fff;
+    background-color: #000;
+}*/
+.ccs-user-information ul > li input{
+    border-radius: 0px;
+    border: 1px solid transparent;
+}
+.ccs-user-information#account-info{
+    display: inline-block;
+}
+.ccs-user-information#account-info > ul{
+	padding-bottom: 10px;
+}
+.ccs-user-information ul{
+	padding-bottom: 60px;
+}
+.ccs-user-information > i{
+	background-size: #222;
+}
+.ccs-user-information ul > li{
+	list-style: none;
+	color: #fff;
+}
+.ccs-user-information > ul li:first-child{
+	font-size: 18px;
+}
+.ccs-user-recent-activities{
+	vertical-align: middle;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	height: inherit;
+}
+.ccs-user-recent-activities > ul{
+	padding: 0;
+}
+.ccs-user-recent-activities > ul li.active{
+	background: #fff;
+	color: #222;
+}
+.ccs-user-recent-activities > ul li{
+	list-style: none;
+	display: inline;
+	color: #fff;
+	padding: 10px 10px;
+	border: 2px solid #fff;
+	cursor: pointer;
+}
+.ccs-user-recent-activities > ul li:not(:first-child){
+	margin-left: 5px;
+}
+.ccs-error, .ccs-not-available{
+    border-color: #ff5151;
+    box-shadow: 1px 0px 3px 0px #ffd3d3 !important;
+}
+.ccs-hidden{
+    visibility: hidden;
+}
+.ccs-user-profile-body-posts{
+	border-top: 5px solid #fff;	
+	position: relative;
+	background: #fff;
+	z-index: 3;
+}
+.ccs-user-profile-posts{
+	margin-left: 10px;
+	padding:10px 15px 15px 10px;
+	border-top: 5px solid rgba(0,0,0,0.2);
+	display: inline-block;
+}
+.ccs-user-profile-forum-posts{
+	border-top:1px solid #E7E7E7; 
+	border-left:1px solid #E7E7E7;  
+	padding: 5px 0;
+	margin-right: 5px;
+	padding-left: 25px;
+}
+/*@media (max-width: 395px){
+	.ccs-user-activities ul li:not(:first-child){
+		margin-left: 10px;
+	}
+	.ccs-user-activities ul{
+		padding-top: 10px;
+	}
+}
+*/
+#ccs-user-profile-edit, #ccs-user-profile-edit-cancel{
+    border-radius: 0;
+    color: #fff;
+    padding: 10px 15px;
+    background-color: #000;
+}
+#ccs-user-profile-edit:hover{
+    background-color: #101010;
+}
+.ccs-user-profile-header-container .ccs-profile-image-container img{
+    padding: 3px;
+    background: #fff;
+    border-radius: 2px;
+    border: 1px #aaa solid;
+    height: 168px;
+    width: 168px;
+}
+.ccs-user-profile-header-container {
+    display: inline;
+    position: relative;
+}
+.ccs-user-profile-header-container .ccs-user-profile-picture #ccs-profile-picture-dropdown .dropdown-menu{
+    border-radius: 0;
+    font-size: 12px;
+    margin-top: -11px;
+    left: 10%;
+}
+.ccs-user-profile-header-container .options {
+    position: absolute;
+    bottom: 10px;
+    border-radius: 3px;
+    padding: 5px 10px;
+    /*font-weight: 900;*/
+    font-size: 11px;
+    opacity: .9;
+    left: 10%;
+    z-index: 2;
+}
+.ccs-user-profile-header-container i.icon-spin{
+    position: absolute;
+    margin-top: 65px;
+    left: 11.88888889%;
+}
+.ccs-avatar-container{
+    cursor: pointer;
+}
+.ccs-avatar-container.selected{
+    background: #0a0;
+}
+.ccs-avatar div{
+    height: 115px;
+    width: 115px;
+}
+/*ANIMATIONS*/
+
+@-moz-keyframes flipInX {
+0% {
+    opacity: 0;
+    transform: perspective(400px) rotateX(90deg);
+}
+40% {
+    transform: perspective(400px) rotateX(-10deg);
+}
+70% {
+    transform: perspective(400px) rotateX(10deg);
+}
+100% {
+    opacity: 1;
+    transform: perspective(400px) rotateX(0deg);
+}
+}

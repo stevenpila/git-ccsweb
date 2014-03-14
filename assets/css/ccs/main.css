@@ -1,0 +1,1218 @@
+/* highlight color */
+::selection{
+    background: #ffc291; /* Safari */
+}
+::-moz-selection{
+    background: #ffc291; /* Firefox */
+}
+.log-in-btn{
+    padding: 10px 20px;
+    background: #333;
+    font-size: 15px;
+    border: 0;
+    color: #fff;
+}
+.log-in-btn:hover{
+    background: #000;
+}
+.moodle-text-checkbox{
+}
+.popover{
+    border-radius: 0;
+}
+.hr_divider {
+  border: 1px dashed #333;
+}
+img#imageBox{
+/*visibility:hidden;*/
+    display:none;
+    height: 400px;
+    margin-top: 20px;
+    border: solid 4px white;
+    z-index: 200;
+        box-shadow: 0 0 10px #999;
+    -webkit-box-shadow: 0 0 10px #999;
+       -moz-box-shadow: 0 0 10px #999;
+         -o-box-shadow: 0 0 10px #999;
+}
+/* custom fonts */
+/***** Font Definition for Open Sans. This stylesheet comes from qrohlf.com/posts/better-opensans *****/
+
+/* Regular */
+
+@font-face {
+	font-family: 'icomoon';
+	src:url('../../fonts/icons/icomoon.eot');
+	src:url('../../fonts/icons/icomoon.eot?#iefix') format('embedded-opentype'),
+		url('../../fonts/icons/icomoon.woff') format('woff'),
+		url('../../fonts/icons/icomoon.ttf') format('truetype'),
+		url('../../fonts/icons/icomoon.svg#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+[class^="ic-"], [class*=" ic-"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.x48{
+    font-size: 36px;
+}
+.x72{
+    font-size: 72px;
+}
+.ic-bullhorn:before {
+    content: "\e603";
+}
+.ic-switch:before {
+    content: "\e604";
+}
+.ic-file-broken:before {
+    content: "\e605";
+}
+.ic-image:before {
+    content: "\e607";
+}
+.ic-paperclip:before {
+    content: "\e60a";
+}
+.ic-email:before {
+    content: "\e60b";
+}
+.ic-cube:before {
+    content: "\e612";
+}
+.ic-pencil:before {
+    content: "\e601";
+}
+.ic-arrow-left:before {
+    content: "\e60e";
+}
+.ic-arrow-down:before {
+    content: "\e60f";
+}
+.ic-arrow-up:before {
+    content: "\e610";
+}
+.ic-uniE611:before {
+    content: "\e611";
+}
+.ic-search:before {
+    content: "\e619";
+}
+.ic-flow-cascade:before {
+    content: "\e627";
+}
+.ic-arrow-left2:before {
+    content: "\e626";
+}
+.ic-arrow-down2:before {
+    content: "\e62a";
+}
+.ic-arrow-up2:before {
+    content: "\e62b";
+}
+.ic-arrow-right:before {
+    content: "\e62c";
+}
+.ic-add-to-list:before {
+    content: "\e62d";
+}
+.ic-vote:before {
+    content: "\e60d";
+}
+.ic-minus:before {
+    content: "\e613";
+}
+.ic-add:before {
+    content: "\e614";
+}
+.ic-checked:before {
+    content: "\e615";
+}
+.ic-error:before {
+    content: "\e616";
+}
+.ic-badge:before {
+    content: "\e606";
+}
+.ic-key:before {
+    content: "\e617";
+}
+.ic-eye:before {
+    content: "\e628";
+}
+.ic-target:before {
+    content: "\e608";
+}
+.ic-settings:before {
+    content: "\e609";
+}
+.ic-user2:before {
+    content: "\e61b";
+}
+.ic-pictures:before {
+    content: "\e61c";
+}
+.ic-search2:before {
+    content: "\e61d";
+}
+.ic-mail:before {
+    content: "\e61e";
+}
+.ic-images:before {
+    content: "\e61f";
+}
+.ic-unlocked:before {
+    content: "\e620";
+}
+.ic-bookmark:before {
+    content: "\e621";
+}
+.ic-article:before {
+    content: "\e622";
+}
+.ic-info:before {
+    content: "\e623";
+}
+.ic-pencil2:before {
+    content: "\e624";
+}
+.ic-chat:before {
+    content: "\e625";
+}
+.ic-cog:before {
+    content: "\e629";
+}
+.ic-locked:before {
+    content: "\e62e";
+}
+.ic-users:before {
+    content: "\e600";
+}
+.ic-user:before {
+    content: "\e602";
+}
+.ic-in:before {
+    content: "\e62f";
+}
+.ic-out:before {
+    content: "\e618";
+}
+.ic-checkmark:before {
+    content: "\e60c";
+}
+.ic-close:before {
+    content: "\e630";
+}
+.ic-trash:before {
+    content: "\e61a";
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    
+    src: url('../../fonts/OpenSans-Regular-webfont.eot');
+    src: url('../../fonts/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../../fonts/OpenSans-Regular-webfont.woff') format('woff'),
+         url('../../fonts/OpenSans-Regular-webfont.ttf') format('truetype'),
+         url('../../fonts/OpenSans-Regular-webfont.svg#OpenSansRegular') format('svg');
+    font-weight: normal;
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+/* Italic */
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../../fonts/OpenSans-Italic-webfont.eot');
+    src: url('../../fonts/OpenSans-Italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../../fonts/OpenSans-Italic-webfont.woff') format('woff'),
+         url('../../fonts/OpenSans-Italic-webfont.ttf') format('truetype'),
+         url('../../fonts/OpenSans-Italic-webfont.svg#OpenSansItalic') format('svg');
+    font-weight: normal;
+    font-weight: 400;
+    font-style: italic;
+
+}
+
+/* Light */
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../../fonts/OpenSans-Light-webfont.eot');
+    src: url('../../fonts/OpenSans-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../../fonts/OpenSans-Light-webfont.woff') format('woff'),
+         url('../../fonts/OpenSans-Light-webfont.ttf') format('truetype'),
+         url('../../fonts/OpenSans-Light-webfont.svg#OpenSansLight') format('svg');
+    font-weight: 200;
+    font-style: normal;
+
+}
+
+/* Light Italic */
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../../fonts/OpenSans-LightItalic-webfont.eot');
+    src: url('../../fonts/OpenSans-LightItalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../../fonts/OpenSans-LightItalic-webfont.woff') format('woff'),
+         url('../../fonts/OpenSans-LightItalic-webfont.ttf') format('truetype'),
+         url('../../fonts/OpenSans-LightItalic-webfont.svg#OpenSansLightItalic') format('svg');
+    font-weight: 200;
+    font-style: italic;
+
+}
+
+/* Semibold */
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../../fonts/OpenSans-Semibold-webfont.eot');
+    src: url('../../fonts/OpenSans-Semibold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../../fonts/OpenSans-Semibold-webfont.woff') format('woff'),
+         url('../../fonts/OpenSans-Semibold-webfont.ttf') format('truetype'),
+         url('../../fonts/OpenSans-Semibold-webfont.svg#OpenSansSemibold') format('svg');
+    font-weight: 500;
+    font-style: normal;
+
+}
+
+/* Semibold Italic */
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../../fonts/OpenSans-SemiboldItalic-webfont.eot');
+    src: url('../../fonts/OpenSans-SemiboldItalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../../fonts/OpenSans-SemiboldItalic-webfont.woff') format('woff'),
+         url('../../fonts/OpenSans-SemiboldItalic-webfont.ttf') format('truetype'),
+         url('../../fonts/OpenSans-SemiboldItalic-webfont.svg#OpenSansSemiboldItalic') format('svg');
+    font-weight: 500;
+    font-style: italic;
+
+}
+
+/* Bold */
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../../fonts/OpenSans-Bold-webfont.eot');
+    src: url('../../fonts/OpenSans-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../../fonts/OpenSans-Bold-webfont.woff') format('woff'),
+         url('../../fonts/OpenSans-Bold-webfont.ttf') format('truetype'),
+         url('../../fonts/OpenSans-Bold-webfont.svg#OpenSansBold') format('svg');
+    font-weight: bold;
+    font-weight: 700;
+    font-style: normal;
+
+}
+
+/* Bold Italic */
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../../fonts/OpenSans-BoldItalic-webfont.eot');
+    src: url('../../fonts/OpenSans-BoldItalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../../fonts/OpenSans-BoldItalic-webfont.woff') format('woff'),
+         url('../../fonts/OpenSans-BoldItalic-webfont.ttf') format('truetype'),
+         url('../../fonts/OpenSans-BoldItalic-webfont.svg#OpenSansBoldItalic') format('svg');
+    font-weight: bold;
+    font-weight: 700;
+    font-style: italic;
+
+}
+
+/* Extra Bold */
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../../fonts/OpenSans-ExtraBold-webfont.eot');
+    src: url('../../fonts/OpenSans-ExtraBold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../../fonts/OpenSans-ExtraBold-webfont.woff') format('woff'),
+         url('../../fonts/OpenSans-ExtraBold-webfont.ttf') format('truetype'),
+         url('../../fonts/OpenSans-ExtraBold-webfont.svg#OpenSansExtrabold') format('svg');
+    font-weight: 900;
+    font-style: normal;
+
+}
+
+/* Extra Bold Italic */
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../../fonts/OpenSans-ExtraBoldItalic-webfont.eot');
+    src: url('../../fonts/OpenSans-ExtraBoldItalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../../fonts/OpenSans-ExtraBoldItalic-webfont.woff') format('woff'),
+         url('../../fonts/OpenSans-ExtraBoldItalic-webfont.ttf') format('truetype'),
+         url('../../fonts/OpenSans-ExtraBoldItalic-webfont.svg#OpenSansExtraboldItalic') format('svg');
+    font-weight: 900;
+    font-style: italic;
+
+}
+
+@font-face{
+    font-family: Perpetua_Titling_MT_Bold;
+    src: url('http://localhost/CCS/font/Perpetua_Titling_MT_Bold.ttf');
+}
+@font-face{
+    font-family: Engraver_MT;
+    src: url('http://localhost/CCS/font/Engraver_MT.ttf');
+}
+
+/* global fonts */
+.perpetua_titling_mt_bold{
+    font-family: Perpetua_Titling_MT_Bold;
+}
+.engraver_mt{
+    font-family: Engraver_MT;
+}
+
+.ccs-home-page{
+    background: #ff6000;
+    font-family: 'Open Sans';
+    font-weight: 100;
+    font-size: 72px;
+    color: #fff;
+}
+.ccs-home-page img{
+    height: 200px;
+    /*margin-top: -184px;
+    margin-left: 351px;*/
+}
+.ccs-web-text{
+    padding: 123px 0;
+    position: relative;
+}
+.ccs-web-text{}
+.row-footer{
+    background: #f25b00;
+    font-size: 15px;
+    font-weight: 100px;
+    padding: 50px 0;
+}
+#join-us{
+    color: #000;
+    font-size:25px;
+    line-height: 1%;;
+}
+/* global class */
+.white{
+    color: #eee;
+}
+.black{
+    color: #111;
+}
+.border{
+    border: 1px solid black;
+}
+.center_text{
+    text-align: center;
+}
+.ccs-visible{
+    visibility: visible;
+}
+.ccs-hidden{
+    visibility: hidden;
+}
+.ccs-hero-unit{
+    background-color: #FFF0E3;
+    padding: 50px 0;
+    border-radius: 10px
+}
+.ccs-orange{
+    color: #ff6000 !important;
+}
+
+.alert{
+    padding: 5px 15px;
+}
+.modal-body{
+    padding: 10px 20px 5px 20px;
+}
+.modal-body .bootbox-close-button{
+    margin-top: 0 !important;
+}
+.carousel{
+    
+}
+/*.carousel .carousel-inner img{
+    display: none;
+}*/
+.badge{
+    background: #ff0000;
+}
+.scroller-bar{
+    border: none;
+}
+.scroller-active .scroller-content{
+    padding: 0 10px 0 0;
+}
+.ccs-navbar-brand{
+    padding: 0 15px;
+}
+
+
+/* navbar header */
+
+ul#css-tabs li{
+    display: none;
+}
+.ccs-navbar-header{
+    color: #FFFFFF;
+    font-family: 'Open Sans';
+    font-size: 62px;
+    font-weight: 100;
+}
+/*@media (min-width: 992px) {
+    .ccs-navbar-inverse-fields{
+        width: 52%;
+    }
+}*/
+@media (max-width: 767px){
+    .ccs-navbar-inverse-fields{
+        background: #222 !important;
+    }
+}
+.ccs-navbar-inverse-fields{
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+    font-size: 14px;
+    margin-right: -15px;
+}
+.ccs-navbar-header .navbar-brand{
+    visibility: hidden;
+    color: #fff;
+    font-weight: bold;
+    font-size-adjust: 1;
+}
+.ccs-navbar-header .navbar-toggle{
+    background-color: #333;
+}
+.ccs-navbar-header .navbar-collapse, 
+.ccs-navbar-header .navbar-form{
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    border-left: solid;
+    border-right: solid;
+}
+.ccs-navbar-header .ccs-user-name{
+    margin: 0 0 0 0;
+    font-size: 1.2em;
+    color: #fff;
+    padding: 4px 0;
+}
+.ccs-navbar-header .ccs-user-name img{
+    margin: -5px 5px 0 0;
+}
+.ccs-navbar-header .ccs-user-name:active, 
+.ccs-navbar-header .ccs-user-name:hover{
+    box-shadow: none;
+    cursor: default;
+}
+.ccs-navbar-header .ccs-user-name:hover img{
+    cursor: pointer;
+}
+.ccs-navbar-header .ccs-user-name-menu{
+    background: none;
+}
+.ccs-profile-image.ccs-user-name-profile-picture img{
+    width: 35px;
+    height: 30px;
+}
+
+/* sign in form */
+#sign-in-text{
+    font-size: 72px;
+    font-weight: 100;
+}
+
+.ccs-login-page > ul.nav.nav-tabs{
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+.ccs-login-page > ul.nav.nav-tabs > li{
+    display: table-cell;
+    width: 50%;
+}
+.ccs-login-page > ul.nav.nav-tabs > li > a,
+.ccs-login-page > ul.nav.nav-tabs > li > a:focus,
+.ccs-login-page > ul.nav.nav-tabs > li > a:active,
+.ccs-login-page > ul.nav.nav-tabs > li > a:hover{
+    text-align: center;
+    outline: 0;
+    border-radius: 0;
+}
+
+.ccs-sign-out-checker-container{
+    
+}
+.ccs-sign-in-checker-container .ccs-sign-in-loader, 
+.ccs-sign-out-checker-container .ccs-sign-out-loader{
+    background: url('http://localhost/CCS/img/ajax-sign-in-loader.gif') no-repeat center center;
+    background-size: 70%;
+    height: 20px;
+    width: 30px;
+}
+.ccs-sign-in-checker-container .ccs-sign-in-checker, 
+.ccs-sign-out-checker-container .ccs-sign-out-checker{
+    padding: 8px 8px 8px 15px;
+    background-color: #ffe3c6; 
+    /*border-radius: 5px;*/
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+.ccs-sign-in-checker-container .ccs-sign-in-checker i, 
+.ccs-sign-out-checker-container .ccs-sign-out-checker i{
+    margin-right: 7px;
+}
+
+/* sign up form */
+.ccs-sign-up-form{
+/*            border-radius: 5px;
+       -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+            box-shadow: 0 0 10px #999;
+    -webkit-box-shadow: 0 0 10px #999;
+       -moz-box-shadow: 0 0 10px #999;
+         -o-box-shadow: 0 0 10px #999;*/
+         font-family: 'Open Sans';
+         padding: 0px 15px;
+
+}
+.ccs-sign-up-form input{  
+    border-bottom: 1px solid #ddd;
+}
+.ccs-sign-up-form input:focus{
+    box-shadow: none !important;   
+    border-bottom: 2px solid #000;
+}
+.ccs-sign-up-form input:hover{
+    box-shadow: none !important;   
+    border-bottom: 2px solid #000;
+}
+.input-lg{
+    border:0px;
+    font-size: 14px;
+    color: #000;
+    box-shadow: none !important;
+    border-radius: 0px;
+}
+
+.ccs-sign-up-form form{
+}
+.ccs-sign-up-form h1{
+    font-family: 'Open Sans';
+    margin-top: 0;
+    text-align: center;
+    font-size: 24px;
+    font-size-adjust: .7;
+    padding: 15px 0;
+}
+.ccs-sign-up-form .ccs-sign-up-fields{
+    padding: 0;
+    font-family: 'Open Sans';
+    font-weight: 200;
+    overflow-y: auto;
+    height: 420px;
+    min-height: 200px;
+    max-height: 500px;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+.ccs-sign-up-form .ccs-sign-up-fields .form-group{
+    margin-right: 0;
+    margin-left: 0;
+    border-radius: 0;
+}
+.ccs-sign-up-form .ccs-sign-up-name .input-group-addon{
+    padding: 0 8px 0 0;
+    border: none;
+    background: none;
+    white-space: normal;
+}
+.ccs-sign-up-form .ccs-sign-up-name .input-group-addon input{
+    border-radius: 0px;
+}
+.ccs-sign-up-form .ccs-sign-up-name .input-group-addon:last-child{
+    padding: 0 0 0 8px;
+}
+.ccs-sign-up-form select{
+    cursor: pointer;
+    color: #bbb;
+    width: 99.9% !important;
+    padding: 10px 13px 8px 13px;
+}
+.ccs-sign-up-form select option{
+    padding: 5px 16px;
+    color: #555;
+}
+.ccs-sign-up-form select option:first-child{
+    color: #bbb;
+}
+.ccs-sign-up-form .ccs-sign-up-service-form select{
+    font-weight: 500;
+}
+.ccs-sign-up-form #company_service_type{
+    padding: 1px;
+}
+.ccs-sign-up-form select option:hover,
+.ccs-sign-up-form .ccs-sign-up-as a:hover,
+.ccs-sign-up-form .glyphicon-question-sign{
+    cursor: pointer;
+}
+.ccs-sign-up-form .ccs-sign-up-as-info{
+    padding: 0 100px 0 0;
+    border: none;
+    background: none;
+    font-weight: 300 !important;
+}
+.ccs-sign-up-form .icon-info-sign{
+    font-size: 1.3em;
+    color: #666;/*color: #ecad00;*/
+}
+.ccs-sign-up-form .icon-info-sign:hover{
+    cursor: pointer;
+    color: #111 !important;/*color: #dea300 !important;*/
+}
+.ccs-sign-up-form .ccs-sign-up-as .form-control{
+    
+    font-size: 18px;
+    font-weight: 100;
+    padding-left: 16px;
+}
+.ccs-sign-up-form .ccs-sign-up-as input{
+     
+     font-size: 9px;
+}
+.ccs-sign-up-form .ccs-sign-up-as .input-group span[class="input-group-addon"]{
+    padding: 0;
+    border: none;
+    background: none;
+}
+.ccs-sign-up-form .input-group-addon{
+}
+.ccs-sign-up-form .ccs-sign-up-username-checker, 
+.ccs-sign-up-form .ccs-sign-up-email-checker{
+    border-color: #ffc69e;
+    background: #ffe3c6;
+}
+.ccs-sign-up-form .username-loader, 
+.ccs-sign-up-form .email-loader, 
+.ccs-captcha-input .captcha-loader{
+    border-color: #ffc69e;
+    background: #ffe3c6;
+}
+.ccs-sign-up-form .ccs-sign-up-username-checker i, 
+.ccs-sign-up-form .ccs-sign-up-email-checker i{
+    margin: 0 1px 2px 4px;
+}
+.ccs-sign-up-form .username-ok, 
+.ccs-sign-up-form .email-ok, 
+.ccs-captcha-input .captcha-ok{
+    border-color: #22bd00 !important;
+    border-top-color: #66AFE9 !important;
+    background: #dff0d8 !important;
+    color: #468847 !important;
+    padding-bottom: 2px;
+}
+.ccs-sign-up-form .username-not-ok, 
+.ccs-sign-up-form .email-not-ok{
+    border-color: #ff5151 !important;
+    background: #F2DEDE !important;
+    color: #B94A48 !important;
+    padding-bottom: 2px;
+}
+.ccs-sign-up-form label{
+    font-size: 10px;
+    float: right;
+    position: relative;
+    margin: 0 0 -25px 0; /*margin: 0 1px -25px 0;*/
+    padding: 0; /*padding: 2px 4px 0 0;*/
+    border-width: 0; /*border-width: 1px 0 1px 1px;*/
+    border-top-color: #ff5151;
+    /*border-radius: 0 5px 0 3px;*/
+    background: none; /*background: #F2DEDE;*/
+    color: #B94A48;
+    box-shadow: none !important;
+}
+.ccs-sign-up-form label.ccs-error-left{
+    font-size: 12px;
+    float: right;
+    position: relative;
+    margin: 0; /*margin: 0 1px -25px 0;*/
+    padding: 0; /*padding: 2px 4px 0 2px;*/
+    border-width: 0; /*border-width: 1px 1px 1px 0;*/
+    border-top-color: #ff5151;
+    /*border-radius: 0 5px 0 3px;*/
+    background: none; /*background: #F2DEDE;*/
+    color: #B94A48;
+    box-shadow: none !important;
+}
+.ccs-sign-up-form label.ccs-error i{
+    margin: 0 0 0 2px;
+    font-size: 12px;
+}
+.ccs-error, .ccs-error-left, .ccs-not-available{
+    border-color: #ff5151 !important;
+    /*box-shadow: 0 0 3px 2px #ffd3d3 !important;*/
+}
+.ccs-error-input{
+    border: 1px solid #ff5151 !important;
+}
+/*.ccs-valid{
+    padding: 2px 4px 2px 3px !important;
+    border-color: #22bd00 !important;
+    border-top-color: #66AFE9 !important;
+    background: #dff0d8 !important;
+    color: #468847 !important;
+}*/
+
+/* user type request */
+.ccs-user-type-action{
+    
+}
+.ccs-user-type-accordion{
+    font-family: Verdana;
+    cursor: pointer;
+}
+.ccs-user-type-details{
+    margin: 12px 0 8px 0;
+}
+.ccs-user-type-details .media-object{
+    border: 1px solid #aaa;
+    padding: 4px;
+}
+.ccs-user-type-details .media-object, 
+.ccs-user-type-details img{
+    border-radius: 4px;
+}
+.ccs-user-type-details .media-body hr{
+    margin: 10px 0;
+    border-style: dotted;
+    border-width: 1px;
+}
+.ccs-user-type-details .media-body table tr td.colon{
+    width: 20px;
+    text-align: center;
+}
+.ccs-user-type-details .ccs-user-type-select, 
+.ccs-user-type-details .ccs-service-type-select, 
+.ccs-user-type-details .ccs-company-service-type-select{
+    margin: 0;
+    padding-left: 2px;
+    font-size: 14px;
+    /*display: none;*/
+}
+.ccs-user-type-details .ccs-user-type-select{
+    width: 140px;
+}
+.ccs-user-type-details .ccs-service-type-select, 
+.ccs-user-type-details .ccs-company-service-type-select{
+    width: 165px;
+}
+.ccs-user-type-details .ccs-user-type-select:hover, 
+.ccs-user-type-details .ccs-service-type-select:hover, 
+.ccs-user-type-details .ccs-company-service-type-select:hover{
+    cursor: pointer;
+}
+.ccs-user-type-details .ccs-user-type-select option, 
+.ccs-user-type-details .ccs-service-type-select option, 
+.ccs-user-type-details .ccs-company-service-type-select option{
+    padding: 1px 0 0 0;
+    padding-left: 6px;
+}
+.ccs-user-type-details .ccs-user-type-change, 
+.ccs-user-type-details .ccs-service-type-change, 
+.ccs-user-type-details .ccs-company-service-type-change{
+    margin-top: 0;
+    font-size: 10px;
+    padding: 3px 5px 2px 5px !important;
+}
+.ccs-user-type-details .ccs-service-type-change, 
+.ccs-user-type-details .ccs-company-service-type-change{
+    margin-top: 0px;
+}
+.ccs-user-type-details .ccs-user-type-select .input-group-addon, 
+.ccs-user-type-details .ccs-service-type-select .input-group-addon{
+    border: none;
+    background: none;
+    padding: 0;
+}
+
+/* method, module, module-detail, user-type-detail: add, edit, delete */
+.ccs-method-delete-form, 
+.ccs-module-delete-form, 
+.ccs-module-detail-delete-form,
+.ccs-user-type-detail-delete-form{
+    max-height: 400px;
+    overflow-y: auto;
+}
+.ccs-method-delete-form form, 
+.ccs-module-delete-form form, 
+.ccs-module-detail-delete-form form{
+}
+.ccs-method-delete-form table > thead, 
+.ccs-method-delete-form table > thead > tr > th, 
+.ccs-module-delete-form table > thead, 
+.ccs-module-delete-form table > thead > tr > th, 
+.ccs-module-detail-delete-form table > thead, 
+.ccs-module-detail-delete-form table > thead > tr > th, 
+.ccs-user-type-detail-delete-form table > thead, 
+.ccs-user-type-detail-delete-form table > thead > tr > th{
+    background: #e6e6e6;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+.ccs-method-delete-form table > tbody, 
+.ccs-module-delete-form table > tbody, 
+.ccs-module-detail-delete-form table > tbody, 
+.ccs-user-type-detail-delete-form table > tbody{
+    text-align: center;
+    border: none;
+}
+.ccs-method-delete-form table > tbody:before, 
+.ccs-module-delete-form table > tbody:before, 
+.ccs-module-detail-delete-form table > tbody:before, 
+.ccs-user-type-detail-delete-form table > tbody:before{
+    line-height: 0.5em;
+    content: "-";
+    color: white;
+    display: block;
+}
+.ccs-method-delete-form table > tbody > tr > td, 
+.ccs-module-delete-form table > tbody > tr > td, 
+.ccs-module-detail-delete-form table > tbody > tr > td, 
+.ccs-user-type-detail-delete-form table > tbody > tr > td{
+    border: 1px solid #ddd;
+}
+.ccs-method-delete-form table > tbody > tr:hover > td, 
+.ccs-module-delete-form table > tbody > tr:hover > td, 
+.ccs-module-detail-delete-form table > tbody > tr:hover > td, 
+.ccs-user-type-detail-delete-form table > tbody > tr:hover > td{
+    background: #fdecdc;
+}
+.ccs-method-delete-form .ccs-method-delete-checkbox, 
+.ccs-module-delete-form .ccs-module-delete-checkbox, 
+.ccs-module-detail-delete-form .ccs-module-detail-delete-checkbox, 
+.ccs-user-type-detail-delete-form .ccs-user-type-detail-delete-checkbox{
+    cursor: pointer;
+}
+.ccs-method-delete-form i.ccs-delete-checkbox, 
+.ccs-module-delete-form i.ccs-delete-checkbox, 
+.ccs-module-detail-delete-form i.ccs-delete-checkbox, 
+.ccs-user-type-detail-delete-form i.ccs-delete-checkbox{
+    margin-right: 3px;
+}
+.ccs-method-delete-form label, 
+.ccs-module-delete-form label, 
+.ccs-module-detail-delete-form label, 
+.ccs-user-type-detail-delete-form label{
+    position: absolute;
+    background: #F2DEDE;
+    color: #B94A48;
+    padding: 1px;
+    margin: -8px 0 0 17px;
+    font-size: 10px;
+}
+::-webkit-input-placeholder {
+   color: red;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: red;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: red;  
+}
+
+:-ms-input-placeholder {  
+   color: red;  
+}
+#sign-in .form-group{
+    padding: 12px 0;
+}
+#sign-in .ccs-sign-in-form #ccs-sign-in-form-inputs{
+    /*padding:0 45px;*/
+}
+#sign-in{
+    padding-top: 153px;
+    text-align: center;
+}
+#sign-in .form-control{
+
+    font-family: 'Open Sans';
+    border: none;
+    font-size: 18px;
+    border-radius: none;
+    box-shadow: 0 !important;
+    border-bottom: 1px solid #ddd;
+}
+#sign-in .form-control:focus{
+    box-shadow: none !important;   
+    border-bottom: 2px solid #000;
+}
+#sign-in .form-control:hover{
+    box-shadow: none !important;   
+    border-bottom: 2px solid #000;
+}
+#sign-in #ccs-moodle-login-checkbox{
+    border: 0;
+}
+form[name="ccs-method-add-form"] .ccs-method-ok, 
+form[name="ccs-module-add-form"] .ccs-module-ok, 
+form[name="ccs-module-detail-add-form"] .ccs-module-detail-ok, 
+form[name="ccs-method-edit-form"] .ccs-method-ok, 
+form[name="ccs-module-edit-form"] .ccs-module-ok, 
+form[name="ccs-module-detail-edit-form"] .ccs-module-detail-ok{
+    border-color: #22bd00 !important;
+    border-top-color: #66AFE9 !important;
+    background: #dff0d8 !important;
+    color: #468847 !important;
+    padding-bottom: 1px;
+}
+form[name="ccs-method-add-form"] .ccs-method-loader, 
+form[name="ccs-module-add-form"] .ccs-module-loader, 
+form[name="ccs-module-detail-add-form"] .ccs-module-detail-loader, 
+form[name="ccs-method-edit-form"] .ccs-method-loader, 
+form[name="ccs-module-edit-form"] .ccs-module-loader, 
+form[name="ccs-module-detail-edit-form"] .ccs-module-detail-loader{
+    border-color: #ffc69e;
+    background: #ffe3c6;
+}
+
+/* user type details */
+.scroller-content > li > ul > li.ccs-module-type-checkbox-uni{
+    list-style: none;
+    padding: 0;
+}
+
+.ccs-privilege-user-types .ccs-user-type-checkbox, 
+.ccs-privilege-user-types .ccs-module-type-checkbox, 
+.ccs-privilege-user-types .ccs-user-type-checkbox > li > ul, 
+.ccs-privilege-user-types .ccs-module-type-checkbox > li > ul{
+    padding-left: 0;
+    list-style: none;
+}
+.ccs-privilege-user-types h2{
+    font-family: Verdana;
+    margin-left: 13px;
+}
+.ccs-privilege-user-types .ccs-user-type-checkbox > li > ul, 
+.ccs-privilege-user-types .ccs-module-type-checkbox > li > ul{
+    padding-left: 17px;
+}
+.ccs-privilege-user-types .ccs-module-type-checkbox > li{
+    font-size: 1.2em;
+}
+.ccs-privilege-user-types .ccs-module-type-checkbox > li > ul > li{
+    font-size: .85em !important;
+}
+.ccs-privilege-user-types .ccs-user-type-checkbox li i, 
+.ccs-privilege-user-types .ccs-user-type-checkbox li b,
+.ccs-privilege-user-types .ccs-module-type-checkbox-all .ccs-module-type-checkbox-uni b, 
+.ccs-privilege-user-types .ccs-module-type-checkbox-all .ccs-module-type-checkbox-uni i, 
+.ccs-privilege-user-types .ccs-user-type-checkbox-all .ccs-user-type-checkbox-uni b, 
+.ccs-privilege-user-types .ccs-user-type-checkbox-all .ccs-user-type-checkbox-uni i{
+    font-weight: normal;
+    cursor: pointer;
+}
+.ccs-privilege-user-types .ccs-module-type-checkbox-uni, 
+.ccs-privilege-user-types .ccs-user-type-checkbox-uni{
+    min-height: 25px;
+}
+.ccs-privilege-user-types .ccs-module-type-checkbox-uni span.ccs-icon-container, 
+.ccs-privilege-user-types .ccs-user-type-checkbox-uni span.ccs-icon-container{
+    padding: 5px 1px 2px 5px;
+}
+.ccs-privilege-user-types .ccs-module-type-checkbox-uni span.ccs-icon-container label, 
+.ccs-privilege-user-types .ccs-user-type-checkbox-uni span.ccs-icon-container label{
+    background: #F2DEDE;
+    color: #B94A48;
+    position: absolute;
+    font-size: 7px;
+    margin: -3px 0 0 10px !important;
+}
+.ccs-privilege-user-types .ccs-module-type-checkbox-uni span.ccs-icon-container i.icon-asterisk, 
+.ccs-privilege-user-types .ccs-user-type-checkbox-uni span.ccs-icon-container i.icon-asterisk{
+    margin: 0;
+}
+.ccs-privilege-user-types .ccs-user-type-checkbox li i, 
+.ccs-privilege-user-types .ccs-module-type-checkbox-all .ccs-module-type-checkbox-uni i{
+    margin-right: 5px;
+}
+.ccs-privilege-user-types .ccs-module-type-checkbox-all div.alert, 
+.ccs-privilege-user-types .ccs-user-type-checkbox-all div.alert{
+    font-size: 12px;
+    margin: 0 0 4px 0;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* profile */
+.ccs-user-profile-details{
+    font-size: 12px;
+    position: relative;
+}
+.ccs-user-profile-details table tr td:last-child{
+    font-weight: bold;
+}
+.ccs-user-profile-details .ccs-profile-picture{
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+.ccs-user-profile-details .ccs-profile-picture button{
+    left: 1.44444449%;
+    margin-top: -29px;
+    position: absolute;
+    display: none;
+}
+.ccs-user-profile-details .ccs-profile-picture i.icon-spin{
+    position: absolute;
+    margin-top: 65px;
+    left: 11.88888889%;
+}
+
+
+form[name="ccs-profile-update-form"] label{
+    font-size: 7px;
+    float: right;
+    border: 1px solid;
+    position: relative;
+    margin: 0 1px -25px 0;
+    padding: 1px 2px 0 0;
+    border-width: 1px 0 1px 1px;
+    border-top-color: #ff5151;
+    border-radius: 0 5px 0 3px;
+    background: #F2DEDE;
+    color: #B94A48;
+    box-shadow: none !important;
+}
+form[name="ccs-profile-update-form"] label i{
+    margin: 0 0 1px 0;
+    font-size: 8px;
+}
+form[name="ccs-profile-update-form"] .ccs-update-profile-email-checker{
+    border-color: #ffc69e;
+    background: #ffe3c6;
+    border-radius: 0;
+}
+form[name="ccs-profile-update-form"] .email-loader{
+    border-color: #ffc69e;
+    background: #ffe3c6;
+} 
+form[name="ccs-profile-update-form"] .ccs-update-profile-email-checker i{
+    margin: 0 1px 1px 0;
+}
+form[name="ccs-profile-update-form"] .email-ok{
+    border-color: #22bd00 !important;
+    border-top-color: #66AFE9 !important;
+    background: #dff0d8 !important;
+    color: #468847 !important;
+    padding-bottom: 1px;
+} 
+form[name="ccs-profile-update-form"] .email-not-ok{
+    border-color: #ff5151 !important;
+    background: #F2DEDE !important;
+    color: #B94A48 !important;
+    padding-bottom: 1px;
+}
+.row{
+    margin:0 auto;
+}
+
+@media(max-width:767px){
+    .wrapper-dropdown-1:after{
+        right: 6%;
+    }
+    form[name="sign_in"] .row{
+        margin-left: 16.6667%;
+    }
+    .navbar-inverse .navbar-nav > li > a{
+        border-bottom: none !important;
+    }
+    .navbar-inverse .navbar-nav > li{
+        border-right: none !important;
+        margin-right: 0 !important;
+    }
+    .navbar-inverse .navbar-nav > li > a:hover,
+    .navbar-inverse .navbar-nav > li > a:focus{
+        color: #fff;
+    }
+}
+
+.navbar-inverse .navbar-nav > li:not(:last-child) {
+    /*border-right: 1px solid #F0F0F0;*/
+    margin-right: 5px;
+}
+
+/****** login error ******/
+.login-error{
+    font-size: 2.5em;
+    position: absolute;
+    z-index: 1;
+    left: -100%;
+    top: 20px;
+}
+.login-error label{
+    background: #eee;
+    border-radius: 0;
+    padding: 15px 20px 15px 10px;
+    color: #fd2d2d;
+}
+.login-error label i{
+    top: 10px;
+    font-size: 1.5em;
+}
+
+.dialog-layout{
+      display: none;
+      top: 30%;
+      font-size: 20px;
+      padding: 10px 20px;
+      background-color: #FFFFFF;
+      border: 1px solid rgba(0, 0, 0, 0.15);
+      border-radius: 2px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.176);
+      position: fixed;
+      margin: 0 auto;
+      z-index: 2001;
+}
+.dialog-layout > button{
+     padding: 0;
+     top: 10px;
+     display: inline-block;
+     width: 40px;
+     text-align: center;
+     color: #D1D1D1;
+     height: 40px;
+     font-size: 23px;
+     border-radius: 50%;
+     border: 3px solid #D1D1D1;
+     cursor: pointer;
+}
+.overlay-bg-layout{
+    bottom: 0;
+    cursor: pointer;
+    display: none;
+    left: 0;
+    opacity: 0.2;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 2000;
+    height: 100%;
+    background: #000;
+}
+
+.modal-body.forgot {
+    padding: 10px 20px 0px 20px !important;
+}
+
+.my-error {
+    border: 1px solid !important;
+    border-color: red !important;
+    box-shadow: none !important;
+}

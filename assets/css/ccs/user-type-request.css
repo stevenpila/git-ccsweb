@@ -1,0 +1,99 @@
+.ccs-user-type-action{
+    
+}
+.ccs-user-type-accordion{
+    font-family: Verdana;
+    cursor: pointer;
+}
+.ccs-user-type-details .media-object{
+    border: 1px solid #aaa;
+    padding: 4px;
+}
+.ccs-user-type-details .media-object, 
+.ccs-user-type-details img{
+    border-radius: 4px;
+}
+.ccs-user-type-details .media-body hr{
+    margin: 10px 0;
+    border-style: dotted;
+    border-width: 1px;
+}
+.ccs-user-type-details .media-body table tr td.colon{
+    width: 20px;
+    text-align: center;
+}
+.ccs-user-type-details .ccs-user-type-select, 
+.ccs-user-type-details .ccs-service-type-select, 
+.ccs-user-type-details .ccs-company-service-type-select{
+    margin: 0;
+    padding-left: 2px;
+    font-size: 14px;
+    /*display: none;*/
+}
+.ccs-user-type-details .ccs-user-type-select{
+    width: 140px;
+}
+.ccs-user-type-details .ccs-service-type-select, 
+.ccs-user-type-details .ccs-company-service-type-select{
+}
+.ccs-user-type-details .ccs-user-type-select:hover, 
+.ccs-user-type-details .ccs-service-type-select:hover, 
+.ccs-user-type-details .ccs-company-service-type-select:hover{
+    cursor: pointer;
+}
+.ccs-user-type-details .ccs-user-type-select option, 
+.ccs-user-type-details .ccs-service-type-select option, 
+.ccs-user-type-details .ccs-company-service-type-select option{
+    padding: 1px 0 0 0;
+    padding-left: 6px;
+}
+.ccs-user-type-details .ccs-user-type-change, 
+.ccs-user-type-details .ccs-service-type-change, 
+.ccs-user-type-details .ccs-company-service-type-change{
+    /*margin-top: -5px;*/
+    font-size: 10px;
+    padding: 3px 5px 2px 5px !important;
+    margin-left: 10px;
+}
+.ccs-user-type-details .ccs-service-type-change, 
+.ccs-user-type-details .ccs-company-service-type-change{
+    /*margin-top: -5px;*/
+    margin-left: 10px;
+}
+.ccs-user-type-details .ccs-user-type-select .input-group-addon, 
+.ccs-user-type-details .ccs-service-type-select .input-group-addon{
+    border: none;
+    background: none;
+    padding: 0;
+}
+
+/* privileges */
+.ccs-privileges-delete-checkbox:hover,
+.ccs-privileges-delete-checkbox-all:hover{
+    cursor: pointer;
+}
+.ccs-submit-delete-privileges-container{
+    position: absolute;
+    display: none;
+}
+.ccs-submit-delete-privileges-container > a,
+.ccs-submit-delete-privileges-container > a > i{
+    transition: none;
+}
+.ccs-submit-delete-privileges-container:hover:after,
+.ccs-submit-delete-privileges-container:active:after,
+.ccs-submit-delete-privileges-container:focus:after{
+    border-left-color: #ED9C28 !important;
+}
+.ccs-submit-delete-privileges-container:after{
+    content: "";
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid #F0AD4E;
+    border-right: 0 none;
+    display: inline-block;
+    margin-left: -4.22222px;
+    margin-top: -9.66667px;
+    position: absolute;
+    top: 50%;
+}

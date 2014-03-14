@@ -1,0 +1,191 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <title>CCS | College of Computer Studies | <?php echo $class ?></title>
+        
+    <!-- bootstrap -->
+        <link rel="stylesheet" media="screen" href="<?php echo base_url() ?>assets/css/bootstrap_v3/css/bootstrap.css">
+        
+    <!-- scrollbar -->
+        <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/scrollbar/jquery.fs.scroller.css">
+        
+    <!-- summernote -->
+        <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/summernote/summernote.css">
+        
+    <!-- customize css -->
+        <link rel="stylesheet" media="screen" href="<?php echo base_url() ?>assets/css/ccs/main.css">
+        <link rel="stylesheet" media="screen" href="<?php echo base_url() ?>assets/css/ccs/layout.css">
+<!--        <link rel="stylesheet" media="screen" href="<?php echo base_url() ?>assets/css/ccs/forum.css">
+        <link rel="stylesheet" media="screen" href="<?php echo base_url() ?>assets/css/ccs/announcement.css">
+        <link rel="stylesheet" media="screen" href="<?php echo base_url() ?>assets/css/ccs/poll.css">-->
+        
+    <!-- jquery -->
+        <script src="<?php echo base_url() ?>assets/js/plugin/jquery/jquery.js"></script>
+    </head>
+    <body style="padding-top: 139px">
+        <!-- header -->
+        <nav class="navbar navbar-inverse navbar-fixed-top ccs-navbar-header" style="border-bottom: 0px" role="navigation"> 
+            <div class="container-fluid" style="background: #222">
+                <div class="ccs-navbar-header">CCS <span style="font-weight:700;font-style:italic;">Web</span></div>
+            </div>
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                      <span class="sr-only">Toggle navigation</span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse navbar-ex1-collapse" id="bs-example-navbar-collapse-1" style="border: none;">
+                    <div class="navbar-inverse">
+                        <!--<div class="ccs-navbar-inverse-fields">-->
+                            <ul class="nav navbar-nav navbar-right ccs-navbar-inverse-fields" id="css-tabs">
+                                <li class="<?php echo ($class == 'Home')?'active':'' ?>" style="display: list-item;"><a href="<?php echo base_url() ?>home">Home</a></li>
+                                <li class="<?php echo ($class == 'Anouncement')?'active':'' ?>" style="display: list-item;"><a href="<?php echo base_url() ?>home">Announcement</a></li>
+                                <li class="<?php echo ($class == 'Forum')?'active':'' ?>" style="display: list-item;"><a href="<?php echo base_url() ?>home">Forum</a></li>
+                                <li class="<?php echo ($class == 'Poll')?'active':'' ?>" style="display: list-item;"><a href="<?php echo base_url() ?>home">Poll</a></li>
+                                <?php // $this->authentication->is_authorized_link('announcement','Anouncement',($class_name == 'Announcement')?'active':''); ?>
+                                <?php // $this->authentication->is_authorized_link('forum','Forum',($class_name == 'Forum')?'active':''); ?>
+                                <?php // $this->authentication->is_authorized_link('poll','Poll',($class_name == 'Poll')?'active':''); ?>
+                                <li class="dropdown <?php echo ($class == 'User_type')?'active':'' ?>" style="display: list-item;">
+                                    <a href="<?php echo base_url() ?>home">Request</a>
+                                    <?php // $this->authentication->is_authorized_link('user_type','Request'); ?>
+                                </li>
+                                <?php $privilege = (array_search($class, array('Module','Method','Module_detail','User_type_detail')) !== FALSE)?'active':'' ?>
+                                <li class="dropdown <?php echo $privilege ?>" style="display: list-item;">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Privilege</a>
+                                    <ul class="dropdown-menu">
+                                        <?php // $this->authentication->is_authorized_link('module','Module'); ?>
+                                        <?php // $this->authentication->is_authorized_link('method','Method'); ?>
+                                        <?php // $this->authentication->is_authorized_link('module_detail','Module Detail'); ?>
+                                        <?php // $this->authentication->is_authorized_link('user_type_detail','User Type Detail'); ?>
+                                    </ul>
+                                </li>
+                            </ul>
+                        <!--</div>-->
+                    </div>
+                </div>
+            </div>
+        </nav>
+    <!-- end of header -->
+    <!-- content -->
+        <div class="row ccs-layout-container">
+            <div class="col-md-2 col-sm-3 col-xs-3 ccs-layout-inner ccs-profile-services-vertical-menu">
+                <div class="ccs-profile-image-container ccs-user-name-current-owner">
+                    <div class="ccs-profile-image ccs-user-name-profile-picture">
+                        <img src="<?php echo $this->authentication->user_profile_picture() ?>" title="Avatar">
+                    </div>
+                    <div style="display:inline-block;vertical-align:middle;color:#ddd;margin-top: -10px">
+                         Hi, <span style="line-height:10px;"><?php echo strtoupper($this->authentication->user_name()) ?></span>
+                        <div class="ccs-user-type" style="margin-top: 5px"><?php echo $this->authentication->user_type() ?></div>
+                    </div>
+                </div>
+                <ul class="css-vertical-menu-ul">
+                    <li><a href="#"><i class="ic-search2 active-li"></i>
+                        <input type="text" placeholder="Search Profile...">
+                    </a></li>
+                    <li><a href="#"><i class="ic-user2"></i>
+                        Profile
+                    </a></li>
+                    <li><a href="#"><i class="ic-pictures"></i>
+                        Gallery    
+                    </a></li>
+                    <li id="accordion"><a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" class="collapsed">
+
+                        <i class="ic-cog"></i>
+                        Services
+
+                           <!--  <div id="ccs-services-submenu" name="secret_question" class="wrapper-dropdown-1" tabindex="1" title="This field is required.">
+                              <ul class="dropdown" name="service_type" tabindex="1">
+                                   <?php foreach($service_types as $service_type){ ?>
+                                  <li value="<?php echo $service_type->id ?>"><a href="#"><?php echo $service_type->name ?></a></li>
+                                   <?php } ?>
+                              </ul>
+                             </div>    --> 
+                        <div class="ccs-profile-submenu collapse" id="collapseOne">
+                                <ul>
+                                    <li><a href="#" class="active"><div><span class="ic-share"></span>Resume Maker</div></a></li>
+                                    <li><a href="#"><div><span class="ic-share"></span>Graduate Tracer</div></a></li>
+                                    <li><a href="#"><div><span class="ic-share"></span>Student Portfolio</div></a></li>
+                                    <li><a href="#"><div><span class="ic-share"></span>Job Posting</div></a></li>
+                                    <li><a href="#"><div><span class="ic-share"></span>Job Matcher</div></a></li>
+                                    <li><a href="#"><div><span class="ic-share"></span>IT Company Profiler</div></a></li>
+                                    <li><a href="#"><div><span class="ic-share"></span>Learning Object CMS</div></a></li>
+                                    <li><a href="#"><div><span class="ic-share"></span>Learning Object Account Management</div></a></li>
+                                    <li><a href="#"><div><span class="ic-share"></span>SP Indexer</div></a></li>
+                                    <li><a href="#"><div><span class="ic-share"></span>SP Documentation Manager</div></a></li>
+
+                                </ul>
+                            </div>
+                    </a></li>
+                    <li><a href="#"><i class="ic-switch"></i>
+                        Sign out
+                    </a></li>
+                </ul>
+            </div>
+            <div class="col-md-10 col-sm-9 col-xs-9 ccs-layout-inner ccs-content-container">
+                <?php //$this->breadcrumb->generate($links) ?>
+                <?php echo $content ?>
+            </div>
+        </div>
+        <!-- <div class="navbar navbar-static-bottom navbar-inverse" style="color: #fff; text-align: center; padding-top: 12px; margin-bottom: 0; border-radius: 0">
+            &COPY; 2013 All Rights Reserved. Software Engineering Project. CCS Website.
+        </div> -->
+    <!-- end of content -->
+        
+    <!-- form validation -->
+        <script src="<?php echo base_url() ?>assets/js/plugin/formvalidator/dist/jquery.validate.min.js"></script>
+    <!-- timeago -->
+        <script src="<?php echo base_url() ?>assets/js/plugin/timeago/jquery.timeago.js"></script>
+    <!-- bootstrap -->
+        <script src="<?php echo base_url() ?>assets/css/bootstrap_v3/js/bootstrap.min.js"></script>
+    <!-- datatables -->
+        <script src="<?php echo base_url() ?>assets/js/plugin/datatables/jquery.dataTables.min.js"></script>
+        <script src="<?php echo base_url() ?>assets/js/plugin/datatables/dataTables.bootstrap.js"></script>
+    <!-- scrollbar -->
+        <script src="<?php echo base_url() ?>assets/js/plugin/scrollbar/jquery.scroller.min.js"></script>
+    <!-- summernote -->
+        <script src="<?php echo base_url() ?>assets/js/plugin/summernote/summernote.min.js"></script>
+        
+    <!-- customize js -->
+        <script src="<?php echo base_url() ?>assets/js/ccs/main.js"></script>
+<!--        <script src="<?php echo base_url() ?>assets/js/ccs/request-user-type.js"></script>
+        <script src="<?php echo base_url() ?>assets/js/ccs/modules.js"></script>
+        <script src="<?php echo base_url() ?>assets/js/ccs/methods.js"></script>
+        <script src="<?php echo base_url() ?>assets/js/ccs/module-details.js"></script>
+        <script src="<?php echo base_url() ?>assets/js/ccs/user-type-details.js"></script>
+        <script src="<?php echo base_url() ?>assets/js/ccs/forum.js"></script>
+        <script src="<?php echo base_url() ?>assets/js/ccs/announcement.js"></script>
+        <script src="<?php echo base_url() ?>assets/js/ccs/poll.js"></script>
+        <script src="<?php echo base_url() ?>assets/js/ccs/profile.js"></script>-->
+        <script type="text/javascript">
+            $(document).ready(function(){
+                resize_height();
+                
+                $(window).resize(function(){
+                    resize_height();
+                });
+                
+                $('#accordion').click(function(){
+                    $(window).scroll(function(){
+                        resize_height();
+                    });
+                });
+            });
+
+            var resize_height = function(){
+                var pageHeight = $(document).height();
+                var heightNav = $('.ccs-navbar-header').height();
+                var contentHeight = pageHeight - heightNav;
+                var container = $('.ccs-layout-container');
+                
+                if(container.height() < pageHeight){
+                    $('.ccs-layout-container').css({
+                        height: contentHeight + 'px'
+                    });
+                }
+            }
+        </script>
+    </body>
+</html>

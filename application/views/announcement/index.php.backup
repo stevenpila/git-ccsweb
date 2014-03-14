@@ -1,0 +1,184 @@
+<div class="row ccs-announcement-row">
+      <div class="ccs-add-new-forum-announcement-form">
+        <?php echo form_open_multipart('announcement/create_announcement',array('name'=>'ccs-announcement-add-form','method'=>'POST')) ?>
+        <div class="ccs-add-new-forum-announcement-form-inner">
+            <div class="input-group">
+                <span class="input-group-addon" style="background: #009999; border-radius: 4px 0 0 0; border-color: transparent">Topic :</span>
+                <label class="ccs-error hide pull-right" for="topic" style="position: absolute; right: 0; margin: 5px 5px 0 0; color: #B94A48">
+                    <i class="glyphicon glyphicon-asterisk pull-right"></i>
+                </label>
+                <input type="text" name="topic" class="form-control input-lg" placeholder="" />
+            </div>
+            <textarea id="ccs-summernote-announcement-create-container" class="form-control hide" name="detail" placeholder="Detail"></textarea>
+            <div class="ccs-add-new-forum-announcement-form-content"></div>
+            <div class="ccs-btn-post">
+                <div class="ccs-attached-announcement-files pull-left">
+                    <input class="" type="file" name="userfile" size="20" />
+                </div>
+                <button type="button"><i class="ic-paperclip"></i> Attach File</button>
+                <button type="submit"><i class="ic-bullhorn"></i> Post</button>
+            </div>
+        </div>
+        </form>
+    </div>
+    <div class="col-md-12 ccs-announcement-header" style="padding: 0">
+        <?php // $this->authentication->is_authorized_anchor('announcement/create_announcement','<i class="ic-add"></i>','class="btn-add-announcement ccs-announcement-add-new"') ?>
+        <div class="btn-add-announcement"><a class="ccs-announcement-add-new" href="#" title="Create New Thread"><i class="ic-add"></i></a></div>
+    </div>
+    <div class="col-md-12 ccs-announcement">
+<?php if($announcements){ ?>
+<?php foreach($announcements as $announcement){ ?>
+          <div class="media ccs-announcement-media" data-value="<?php echo $announcement->id ?>">
+              <a class="ccs-profile-image-container <?php echo($announcement->user_id == $this->authentication->user_id())?'ccs-current-owner':'' ?> pull-left" href="#">
+                <div class="ccs-profile-image">
+                <img class="media-object" src="<?php echo base_url() . $announcement->author_pic ?>" title="Avatar">
+                </div>
+              </a>
+              <div></div><div class="media-body">
+                <div class="ccs-announcement-thread-container">
+                    <a class="ccs-announcement-thread" href="#" style="word-wrap: break-word"><?php echo htmlspecialchars($announcement->topic) ?></a>
+                </div>
+                <div class="ccs-announcement-author">
+                    by <?php echo ucwords(htmlspecialchars($announcement->author_name)) ?> <?php echo date('M d, Y',strtotime(htmlspecialchars($announcement->date_posted))) ?>
+                </div>
+                <hr/>
+                
+                <p class="ccs-announcement-detail" data-height="" style="margin: 0 2px 0 0; text-align: justify;">
+                    <?php echo nl2br($announcement->detail) ?>
+                </p>
+              <?php if($announcement->user_id == $this->authentication->user_id() || $this->authentication->user_type_id() == 1){ ?>
+                <div class="row ccs-announcement-thread-controls">
+                    <ul data-value="<?php echo $announcement->id ?>">
+                       <li class="ccs-announcement-see-more" data-collapse="0"><a href="#"><span class="ic-arrow-down"></span></a></li>
+                       <li class="ccs-announcement-edit"><a href="#"><span class="ic-pencil"></span></a></li>
+                       <li class="ccs-announcement-delete"><a href="#"><span class="ic-trash"></span></a></li>
+                       <li class="ccs-announcement-pin"><a href="#"><span class="ic-info"></span></a></li>
+                    </ul>
+                </div>
+              <?php } ?>
+              </div>
+          </div>
+<?php }}else{ ?>
+    <div class="ccs-announcement-no-post" style="margin-top: -10px; text-align: center">
+        <h3><i>No Announcements Available</i></h3>
+    </div>
+<?php } ?>
+    </div>
+</div>
+<script>
+    $(document).ready(function(){
+        var flag = false, 
+            file = 1;
+        
+        $('.ccs-add-new-forum-announcement-form-content').summernote({
+            height: 'auto',
+            toolbar: [
+//                ['style', ['style']], // no style button
+                ['style', ['bold', 'italic', 'underline', 'clear']],
+                // ['fontsize', ['fontsize']],
+                ['color', ['color']],
+                ['para', ['ul', 'ol', 'paragraph']],
+//                ['height', ['height']],
+                ['insert', ['picture']], // no insert buttons
+                ['table', ['table']] // no table button
+          //     ['help', ['help']] //no help button
+            ],
+            oninit: function(){
+                $('<label class="ccs-error hide pull-right" for="detail" style="position: absolute; right: 0; margin: 5px 5px 0 0; color: #B94A48"><i class="glyphicon glyphicon-asterisk pull-right"></i></label>').insertBefore('.note-editable');
+                $('.note-editable').css({
+                    'min-height': '205.583px'
+                });
+            },
+            onblur: function(e) {
+                var code = $(this).code();
+                var regex = /\S/g;
+                var result = strip_tags(code, "<img>"), result = result.replace(/&nbsp;/gi, "");
+                
+                if(regex.test(result)){
+                    //hide required error
+                    $('.note-editor > label').addClass('hide');
+                }
+                else if(flag) $('.note-editor > label').removeClass('hide');
+            }
+        });
+        
+        $('.note-image-input-trigger').click(function(e){
+            $('.note-image-input').click();
+            
+            e.preventDefault();
+        });
+        
+        $('form[name="ccs-announcement-add-form"] .ccs-btn-post > button[type="button"]').click(function(){
+            file = $('.ccs-attached-announcement-files > input').last().index() + 1;
+            
+            $('.ccs-attached-announcement-files > input:nth-child(' + file + ')').click();
+        });
+        
+        $('.ccs-attached-announcement-files > input:nth-child(' + file + ')').change(function(){
+            $('<b>hehe</b>').insertBefore(this);
+        });
+        
+        $('form[name="ccs-announcement-add-form"] button[type="submit"]').click(function(e){
+            e.preventDefault();
+            
+            var summernote = $('.ccs-add-new-forum-announcement-form-content');
+            var code = summernote.code();
+            var regex = /\S/g;
+            $('#ccs-summernote-announcement-create-container').val(code);
+            var result = strip_tags(code, "<img>"), result = result.replace(/&nbsp;/gi, "");
+            var form = $('form[name="ccs-announcement-add-form"]');
+            var valid = form.valid();
+            flag = true;
+            
+            if(valid && regex.test(result)){
+                form.submit();
+            }
+            else if(!regex.test(result)){
+                $('.note-editor > label').removeClass('hide');
+            }
+        });
+        
+        $('.ccs-add-new-forum-announcement-form form').validate({
+            debug: true,
+            rules: {
+                topic: "required"
+            },
+            messages: {
+                topic: ""
+            },
+            onkeyup: false,
+            onclick: false,
+            unhighlight: function(element, errorClass, validClass){
+                $('.ccs-add-new-forum-announcement-form-inner .input-group .ccs-error').addClass('hide');
+            },
+            errorPlacement: function(error, element){
+                $('.ccs-add-new-forum-announcement-form-inner .input-group .ccs-error').removeClass('hide');
+            },
+            submitHandler: function(form){
+                form.submit();
+            }
+        });
+        
+        $('.note-editor > .note-toolbar > .note-insert').click(function(e){
+            e.preventDefault();
+            
+            var summernote = $('.ccs-add-new-forum-announcement-form-content');
+            var code = summernote.code();
+            var regex = /<img\b[^>]*>/gi;
+            
+            if(regex.test(code.toString())){
+                alert('WARNING: YOU CAN ONLY INSERT ONE IMAGE PER THREAD');
+                return false;
+            }
+        });
+    });
+    
+    function strip_tags(input, allowed){
+        allowed = (((allowed || "") + "").toLowerCase().match(/<[a-z][a-z0-9]*>/g) || []).join(''); // making sure the allowed arg is a string containing only tags in lowercase (<a><b><c>)
+        var tags = /<\/?([a-z][a-z0-9]*)\b[^>]*>/gi,
+            commentsAndPhpTags = /<!--[\s\S]*?-->|<\?(?:php)?[\s\S]*?\?>/gi;
+        return input.replace(commentsAndPhpTags, '').replace(tags, function ($0, $1) {
+            return allowed.indexOf('<' + $1.toLowerCase() + '>') > -1 ? $0 : '';
+        });
+    }
+</script>

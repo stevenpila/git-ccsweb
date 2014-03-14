@@ -1,0 +1,11 @@
+/* DEMO 1 */
+/*.wrapper-dropdown-1:focus .dropdown {
+    opacity: 1;
+    pointer-events: auto;
+}*/
+
+.wrapper-dropdown-1:focus:after {
+    border-color: #9bc7de transparent;
+    border-width: 6px 6px 0 6px ;
+    margin-top: -3px;
+}

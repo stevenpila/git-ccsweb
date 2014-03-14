@@ -1,0 +1,30 @@
+.ccs-gallery-thumbnail-carousel{
+	background: #333;
+}
+.ccs-gallery-thumbnail-carousel .thumbnail{
+	border: 4px solid #fff;
+	border-radius: 0;
+	margin: 15px;
+	margin-top: 30px;
+	            box-shadow: 0 0 10px #999;
+    -webkit-box-shadow: 0 0 10px #999;
+       -moz-box-shadow: 0 0 10px #999;
+         -o-box-shadow: 0 0 10px #999;
+}
+.ccs-toggle-images{
+	font-size: 15px;
+	color: #333;
+
+}
+.ccs-toggle-images button{
+	border-radius: 0;
+}
+#carousel-example-generic .carousel-control.right,
+#carousel-example-generic .carousel-control.left{
+	background: none;
+	width: 5%;
+	text-align: center;
+}
+#carousel-example-generic .carousel-control.right .carousel-control .icon-prev, .carousel-control .icon-next, .carousel-control .glyphicon-chevron-left, .carousel-control .glyphicon-chevron-right{
+	left: 25%;
+}

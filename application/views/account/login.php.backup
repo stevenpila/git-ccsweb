@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CCS | College of Computer Studies</title>
+        <link rel="icon" type='image/png' href='<?php echo base_url() ?>assets/img/ccs_logo.png'/>
+        
+    <!-- bootstrap -->
+        <script type="text/javascript" src="<?php echo base_url() ?>assets/css/bootstrap_v3/js/bootstrap.js"></script>
+        
+        <link rel="stylesheet" media="screen" href="<?php echo base_url() ?>assets/css/bootstrap_v3/css/bootstrap.css">
+
+        <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/css/ccs/orange.css">
+        <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/css/ccs/noJS.css">
+        <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/css/ccs/dropdownstyle.css">
+    <!-- scrollbar -->
+        <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/scrollbar/jquery.fs.scroller.css">
+        
+    <!-- customize css -->
+        <link rel="stylesheet" media="screen" href="<?php echo base_url() ?>assets/css/ccs/main.css">
+    </head>
+    <body>
+        <!--<input type="hidden" id="refreshed" value="no">-->
+        
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <!-- /.navbar-collapse -->
+        
+        <div class="">
+            <div class="row">
+            <div class="col-md-8 col-sm-8 col-lg-9 ccs-home-page">
+                 <div class="row">
+                      <div></div>
+                     <div class="col-lg-4 pull-right ccs-web-text">CCS <span style="font-weight:700;font-style:italic;">Web</span>
+                         <p id="join-us">Join Us!</p>
+                     </div>
+                    
+                     <div class="col-lg-12 pull-right row-footer">
+                          <img src="<?php echo base_url() ?>assets/img/ccslogo.png">
+                    </div>
+                </div>
+            </div> <!-- additional content here -->
+            <div class="col-md-4 col-sm-4 col-lg-3 ccs-login-page">
+                <ul class="nav nav-tabs">
+                    <li class="active"><a href="#sign-in" data-toggle="tab" class="sign-in-tab"><span class="ic-user x48 black"></span></a></li>
+                    <li class="pull-right" style="margin-right: -2px"><a href="#sign-up" data-toggle="tab" class="sign-up-tab"><span class="ic-user-add x48 black"></span></a></li>
+                </ul>
+                <div class="tab-content" style="overflow-y: hidden">
+
+                    <div class="tab-pane active" id="sign-in">
+                      <div id="sign-in-text">Sign In</div>
+                     <div class="ccs-sign-in-form">
+                      
+                      <form name="sign_in" action="<?php echo base_url() ?>account/login" method="POST" class="navbar-form navbar-right" role="form">
+                        <div name="validation_errors" class="hide"><?php echo (isset($signin_status))?(!$signin_status)?validation_errors():'<div class="alert alert-danger"><i class="glyphicon glyphicon-remove"></i>&nbsp;&nbsp;<b>Username</b>/<b>Password</b> is invalid.</div>':''; ?></div>
+                        <div class="form-group">
+                          <input type="text" name="username" class="form-control input-sm" placeholder="Username">
+                        </div>
+                        <div class="form-group">
+
+                          <input type="password" name="password" class="form-control input-sm" placeholder="Password">
+                        </div>
+                        <br>
+                       
+                        
+                          <div class="moodle-text-checkbox" autocomplete="off">
+                             <button type="submit" class="log-in-btn">Log in</button>
+                              <input type="checkbox" id="ccs-moodle-login-checkbox" style="cursor: pointer; visibility: hidden"/> 
+                                <label for="ccs-moodle-login-checkbox" style="cursor: pointer; font-weight: normal; visibility: hidden">to Moodle </label> 
+                                
+                          </div>
+<!--?-->                     <script type="text/javascript" src="<?php echo base_url() ?>js/ccs/moodle.js"></script>
+                      </form>
+                    </div>
+                  </div>
+              <div class="tab-pane" id="sign-up">
+                 <div id="dd" class="wrapper-dropdown-1" tabindex="1">
+                        <span>Sign up as</span>
+                          <ul class="dropdown" tabindex="1">
+                              <li value="7"><a href="#">Guest</a></li>
+                              <li value="5"><a href="#">Alumni</a></li>
+                              <li value="4"><a href="#">Faculty</a></li>
+                              <li value="3"><a href="#">Employee</a></li>
+                              <li value="2"><a href="#">Administrator</a></li>
+                          </ul>
+                  </div>
+                <div class="ccs-sign-up-form">
+                <form name="sign_up" action="<?php echo base_url() ?>account/signup" method="POST" class="form-horizontal" role="form">
+<!--                  <div class="form-group" style="margin-bottom: 15px;">
+                    
+                  </div>
+                  <div class="form-group ccs-sign-up-as">
+
+                     
+                            <input type="radio" value="7" id="guest" name="userType" />
+                            <label for="guest">Guest</label>
+                            <input type="radio" value="5" id="alumni" name="userType" />
+                            <label for="alumni">Alumni</label>
+                            <input type="radio" value="4" id="faculty" name="userType" />
+                            <label for="faculty">Faculty</label>
+                            <input type="radio" value="3" id="employee" name="userType" />
+                            <label for="employee">Employee</label>
+                            <input type="radio" value="2" id="admin" name="userType" />
+                            <label for="admin">Administrator</label>
+                 </div>-->
+                <div class="form-group ccs-sign-up-fields" style="margin-top: 14px">
+                  <div class="row">
+                  <div class="col-md-12" style="padding: 0 ">
+                  <div class="form-group ccs-sign-up-name">
+                    <div class="input-group">
+                      <span class="input-group-addon"><input type="text" name="first_name" class="text-field-style form-control input-lg" placeholder="First Name" title="This field is required."></span>
+                      <span class="input-group-addon"><input type="text" name="last_name" class="form-control input-lg" placeholder="Last Name" title="This field is required."></span>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="ccs-sign-up-email-checker ccs-hidden"><i class="icon-spinner icon-spin"></i></label>
+                    <input type="text" name="email" class="form-control input-lg" id="ccs-sign-up-email" placeholder="Email" title="This field is required.">
+                  </div>
+                  <div class="form-group">
+                  <div id="sq" name="secret_question" class="wrapper-dropdown-1" tabindex="1" title="This field is required." style="padding-top: 10px; padding-bottom: 12px">
+                        <span>Secret Question</span>
+                        <ul class="dropdown" tabindex="1">
+                            <?php foreach($secret_questions as $secret_question){ ?>
+                            <li value="<?php echo $secret_question->id ?>"><a href="#"><?php echo $secret_question->name ?></a></li>
+                            <?php } ?>
+                        </ul>
+                  </div>
+                    <!-- <select name="secret_question" class="form-control input-lg" title="This field is required.">
+                        <option selected>Secret Question</option>
+                    <?php foreach($secret_questions as $secret_question){ ?>
+                        <option value="<?php echo $secret_question->id ?>"><?php echo $secret_question->name ?></option>
+                    <?php } ?>
+                    </select> -->
+                  </div>
+                  <div class="form-group">
+                    <input type="text" name="secret_answer" class="form-control input-lg" placeholder="Secret Answer" title="This field is required.">
+                  </div>
+                  <div class="form-group">
+                    <label class="ccs-sign-up-username-checker ccs-hidden"><i class="icon-spinner icon-spin"></i></label>
+                    <input type="text" name="username" class="form-control input-lg" id="ccs-sign-up-username" placeholder="Username" title="This field is required.">
+                  </div>
+                  <div class="form-group">
+                    <input type="password" name="password" class="form-control input-lg" id="ccs-sign-up-password" placeholder="Password" title="This field is required.">
+                  </div>
+                  <div class="form-group">
+                    <input type="password" name="confirm_password" class="form-control input-lg" placeholder="Confirm Password" title="This field is required.">
+                  </div>
+                  <div class="form-group ccs-sign-up-service-form">
+                    <div id="st" name="service_type" class="wrapper-dropdown-1" tabindex="1" title="This field is required." style="padding-top: 10px; padding-bottom: 12px">
+                        <span>Service Type</span>
+                        <ul class="dropdown" tabindex="1">
+                            <?php foreach($service_types as $service_type){ ?>
+                            <li value="<?php echo $service_type->id ?>"><a href="#"><?php echo $service_type->name ?></a></li>
+                            <?php } ?>
+                        </ul>
+                    </div>
+                    <!--<select id="service_type" name="service_type[]" class="form-control" size="5" disabled multiple>-->
+                    <!--<select id="service_type" name="service_type" class="form-control input-lg" disabled>
+                        <option selected>Service Type</option>
+                    <?php foreach($service_types as $service_type){ ?>
+                        <option value="<?php echo $service_type->id ?>"><?php echo $service_type->name ?></option>
+                    <?php } ?>
+                    </select>-->
+                  </div>
+                  </div>
+                  </div>
+                  <div class="row ccs-sign-up-company-form">
+                      <div class="col-md-12" style="padding: 0">
+                          <div class="form-group">
+                            <select id="company_service_type" name="company_service_type[]" class="form-control" size="2" disabled multiple>
+                                <option selected>Service Type</option>
+                            <?php foreach($service_types as $service_type){ ?>
+                            <?php if(array_search($service_type->id, array(3,4,5,6)) !== FALSE){ ?>
+                                <option value="<?php echo $service_type->id ?>"><?php echo $service_type->name ?></option>
+                            <?php }} ?>
+                            </select>
+                          </div>
+                          <div class="form-group" style="text-align: left !important">
+                              <h2>Company Profile</h2>
+                          </div>
+                          <div class="form-group">
+                            <input type="text" name="company_name" class="form-control input-lg" placeholder="Name" title="This field is required." disabled>
+                          </div>
+                          <div class="form-group">
+                            <input type="text" name="company_address" class="form-control input-lg" placeholder="Address" title="This field is required." disabled>
+                          </div>
+                          <div class="form-group">
+                            <input type="email" name="company_email" class="form-control input-lg" placeholder="Email" title="This field is required." disabled>
+                          </div>
+                          <div class="form-group">
+                            <input type="text" name="company_website" class="form-control input-lg" placeholder="Website" title="This field is required." disabled>
+                          </div>
+                          <div class="form-group">
+                            <input type="text" name="company_contact_number" class="form-control input-lg" placeholder="Contact Number" title="This field is required." disabled>
+                          </div>
+                          <div class="form-group" style="margin-bottom: 5px">
+                            <input type="text" name="company_position" class="form-control input-lg" placeholder="Position e.g. Manager, Employee, etc." title="This field is required." disabled>
+                          </div>
+                      </div>
+                  </div>
+                  <input type="hidden" name="service_form" value="1"/>
+                  <input type="hidden" name="company_form" value="1"/>
+                </div>
+                
+                <div class="form-group" style="padding: 10px 0; font-size: 12px; color: #999">
+                    By clicking Sign up, you agree to our <b>Terms</b> and <b>Conditions</b>.
+                </div>
+                <div class="form-group">
+                  <button type="submit" class="log-in-btn">Sign up</button>
+                </div>
+                <input type="hidden" id="ccs-captcha-checker" value="0"/>
+                </form>
+                    </div>
+                 </div>
+               </div>
+             </div>
+            </div><!-- ROW -->
+        </div>
+        
+    <!-- modal for sign in form -->
+        <div class="modal fade ccs-sign-in-checker-container" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content" style="height: 285px !important">
+                <div class="modal-body">
+                    <h1>Processing . . .</h1><br/>
+                    <div class="ccs-sign-in-checker first">Checking if username and password is valid<i class="glyphicon pull-right hide"></i><div class="ccs-sign-in-loader pull-right"></div></div>
+                    <div class="ccs-sign-in-checker second ccs-hidden">Checking if user type is &#8220;Student &#8221 or &#8220;Faculty &#8221;<i class="glyphicon pull-right hide"></i><div class="ccs-sign-in-loader pull-right"></div></div>
+                    <div class="ccs-sign-in-checker third ccs-hidden">Signing in to Moodle<i class="glyphicon pull-right hide"></i><div class="ccs-sign-in-loader pull-right"></div></div>
+                    <div class="ccs-sign-in-checker fourth ccs-hidden">Directing to Homepage<div class="ccs-sign-in-loader pull-right"></div></div>
+                </div>
+              </div>
+            </div>
+        </div>
+    <!-- modal for captcha -->
+        <div class="modal fade" id="ccs-captcha-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                  <h4 class="modal-title"><font size=5 face="Verdana"><b>Captcha</b></font></h4>
+                </div>
+                <div class="modal-body">
+                </div>
+                <div class="modal-footer">
+                    <button type='button' class='btn btn-warning' id="ccs-captcha-word-submit" title='Submit'>Submit</button>
+                    <button type='button' class='btn btn-default' data-dismiss='modal' title='Cancel'>Cancel</button>
+                </div>
+              </div>
+            </div>
+        </div>
+    <!-- moodle logout container -->
+        <div class="ccs-moodle-logout-container"></div>
+        
+    <!-- sign up error -->
+        <div class="ccs-sign-up-error hide">
+            <div class="alert alert-danger" style="margin: 20px 0 0 0"><i class="glyphicon glyphicon-remove"></i> Email not available.</div>
+            <div class="alert alert-danger" style="margin: 10px 0 10px 0"><i class="glyphicon glyphicon-remove"></i> Username not available.</div>
+        </div>
+    <!-- jquery -->
+        <script src="<?php echo base_url() ?>assets/js/plugin/jquery/jquery.js"></script>
+    <!-- checkbox style -->
+        <script src="<?php echo base_url() ?>assets/js/plugin/checkbox/icheck.min.js"></script>
+    <!-- form validation -->
+        <script src="<?php echo base_url() ?>assets/js/plugin/formvalidator/dist/jquery.validate.min.js"></script>
+    <!-- bootstrap -->
+        <script src="<?php echo base_url() ?>assets/css/bootstrap_v3/js/bootstrap.min.js"></script>
+    <!-- bootbox -->
+        <script src="<?php echo base_url() ?>assets/js/plugin/bootbox/bootbox.min.js"></script>
+    <!-- scrollbar -->
+        <script src="<?php echo base_url() ?>assets/js/plugin/scrollbar/jquery.scroller.min.js"></script>
+    <!-- placeholder for IE -->
+        <script src="<?php echo base_url() ?>assets/js/plugin/placeholder/placeholder.js"></script>
+    <!-- customize js -->
+        <script src="<?php echo base_url() ?>assets/js/ccs/main.js"></script>
+        <!-- dropdown -->
+        <script type="text/javascript">
+            $('.ccs-login-page').height($('.ccs-home-page').height());
+            $('.ccs-login-page .tab-content').height($('.ccs-home-page').height() - $('.ccs-login-page .nav-tabs').height() - 2);
+            
+            function DropDown(el) {
+                this.dd = el;
+                this.placeholder = this.dd.children('span');
+                this.opts = this.dd.find('ul.dropdown > li');
+                this.val = '';
+                this.index = -1;
+                this.initEvents();
+            }
+            DropDown.prototype = {
+                initEvents : function() {
+                    var obj = this;
+
+                    obj.dd.on('click', function(event){
+                          $(this).toggleClass('active');
+                          $(this.opts).toggleClass('active');
+                          return false;
+                    });
+
+                    obj.opts.on('click',function(){
+                          var opt = $(this);
+                          obj.val = opt.text();
+                          obj.index = opt.index();
+                          obj.placeholder.text("Sign up as: " + obj.val);
+                    });
+                },
+                getValue : function() {
+                    return this.val;
+                },
+                getIndex : function() {
+                    return this.index;
+                }
+            }
+            $(function() {
+                var dd = new DropDown( $('#dd') );
+
+                $(document).click(function() {
+                    // all dropdowns
+                    $('.wrapper-dropdown-1').removeClass('active');
+                });
+            });
+            
+            $('#dd').click(function(){
+                $('#sq').removeClass('active');
+                $('#st').removeClass('active');
+            });
+            
+            $(function() {
+                var sq = new DropDown( $('#sq') );
+
+                $(document).click(function() {
+                  // all dropdowns
+                    $('.wrapper-dropdown-1').removeClass('active');
+                });
+            });
+            
+            $('#sq').click(function(){
+                $('#dd').removeClass('active');
+                $('#st').removeClass('active');
+            });
+            
+            $(function() {
+                var st = new DropDown( $('#st') );
+
+                $(document).click(function() {
+                    // all dropdowns
+                    $('.wrapper-dropdown-1').removeClass('active');
+                });
+            });
+            
+            $('#st').click(function(){
+                $('#sq').removeClass('active');
+                $('#dd').removeClass('active');
+            });
+        </script>
+        <script>
+            $(document).ready(function(){
+              $('input').each(function(){
+                    var self = $(this),
+                      label = self.next(),
+                      label_text = label.text();
+
+                    label.remove();
+                    self.iCheck({
+                      checkboxClass: 'icheckbox_line-orange',
+                      radioClass: 'iradio_line-orange',
+                      insert: '<div class="icheck_line-icon"></div>' + label_text
+                    });
+              });
+            });
+        </script>
+		
+    <!-- internal scripts [ necessary ] -->
+        <script>
+            $(document).ready(function(){
+                $('.ccs-sign-up-fields').scroller();
+                $('a[data-toggle="tab"].sign-up-tab').on('shown.bs.tab', function (e) {
+                    //e.target; // activated tab
+                    $('.ccs-sign-up-fields').scroller('reset');
+                });
+            <?php if(isset($signup_status) && !$signup_status){ ?>
+                bootbox.alert('<h1 style="color: #B94A48">&nbsp;&nbsp;<i class="glyphicon glyphicon-warning-sign"></i> Oops!!!</h1>' + $('.ccs-sign-up-error').html());
+            <?php } ?>
+            });
+        </script>
+    </body>
+</html>

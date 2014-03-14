@@ -1,0 +1,549 @@
+.ccs-user-profile{
+    background: #E5E9EC;
+    padding-bottom: 20px;
+}
+.ccs-user-activities{
+	padding: 5px 0;
+	max-width: 800px;
+	margin: 0 auto;
+}
+.ccs-user-activities > ul{
+	padding: 0;
+	white-space: nowrap;
+	margin: 0;
+	color: #222;
+	display: inline-block;
+	margin: 0 auto;
+}
+@media (max-width: 395px){
+	.ccs-user-activities > ul li:not(:first-child){
+		margin-left: 15px !important;
+	}
+}
+.ccs-user-activities > ul li{
+	opacity: .8;
+	list-style: none;
+	background:rgba(0,0,0,0.08);
+	width: 80px;
+	text-align: center;
+	display: inline-block;
+	padding:  10px 5px;
+	font-size: 11px;
+}
+.ccs-user-activities > ul li:not(:first-child){
+	margin-left: 40px;
+}
+.ccs-user-profile-user-type{
+	position: relative;
+	width: auto !important;
+	font-size: 18px;
+	color: #eee;
+	padding-top: 10px;
+	cursor: pointer;
+}
+.ccs-user-profile-user-type > ul{
+	
+	/*visibility: hidden;*/
+}
+.ccs-change-picture{
+        position: absolute;
+        bottom: -40px;
+        left:-40px;
+        background: #fff;
+        padding: 10px 20px;
+        color:#333;
+        cursor: pointer;
+}
+.ccs-user-type-employee {
+	position: absolute;
+	background: #f0f0f0;
+	text-align: left;
+	top: 100%;
+	font-size: 13px;
+	left: 15px;
+	width: 200px;
+	padding: 0;
+	z-index: 10;
+	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.176);
+	visibility: hidden;
+}
+.dropIt{
+	visibility: visible;
+	animation-name: flipInX;
+	animation-duration: 0.4s;
+    animation-fill-mode: both;
+}
+.ccs-divider{
+	background-color: #E5E5E5;
+    height: 1px;
+    margin: 5px 0;
+    overflow: hidden;
+}
+.ccs-user-type-employee input{
+	border:none;
+	background: none;
+}
+.ccs-user-type-employee > ul{
+	padding: 0;
+}
+.ccs-user-type-employee > ul li{
+	list-style: none;
+	padding: 3px 10px;
+}
+.ccs-user-type-employee > ul li a{
+	text-decoration: none;
+	color: #222;
+}
+.ccs-user-activities-posts,
+.ccs-user-activities-comments,
+.ccs-user-activities-polls{
+	font-size: 18px;
+	line-height: 10px;
+	text-align: center;
+}
+.ccs-user-profile-header-container{
+	background: url(../../img/cover_photo_2.jpg) fixed no-repeat;
+}
+.ccs-user-profile-header-container-2{	
+	/*text-align: center;*/
+}
+.ccs-user-profile-header{
+	max-width: 800px;
+	margin: 0 auto;
+	/*padding-top: 10px;*/
+	min-width: 200px;
+	position: relative;
+}
+.ccs-user-profile-picture{
+	background: none;
+	display: inline-block;
+}
+.ccs-user-profile-picture img{
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+	border-left: 5px solid #fff;
+	border-right: 5px solid #fff;
+	border-top: 5px solid #fff;
+}
+.ccs-user-information{
+	height: inherit;
+	overflow: hidden;
+	text-align: left;
+	color: #222;
+	display: none;
+	background: #fff;
+}
+.css-profile-count-actions > #accordion > .in {
+  display: block;
+}
+.css-profile-count-actions form {
+}
+.ccs-user-information input{
+	/*background: rgba(0,0,0,0.05);*/
+    padding: 5px 3px;
+	border: none;
+	width: 100%;
+}
+.ccs-user-information ul{
+	padding: 0;
+	margin: 0;
+	padding: 0 25px 15px 25px;
+}
+.ccs-user-information ul > li > input{
+	padding: 5px 2px;
+	margin: 5px 0;
+    /*background: #000;*/
+}
+
+.ccs-profile-update-form-controls > button{
+	padding: 6px 11px;
+	margin-top: 10px;
+	margin-right: 10px;
+	border: 0;
+	transition:all 0.25s ease 0s;
+}
+.ccs-profile-update-form-controls > button:first-child{
+	background: #FF7417;
+	color: #fff;
+	border: 1px solid #FF7417;
+}
+.ccs-profile-update-form-controls > button:nth-child(2){
+	background: #009999;
+	border: 1px solid #009999;
+	color: #fff;	
+}
+.ccs-profile-update-form-controls > button:first-child:hover{
+	background: #ea5e00;
+}
+.ccs-profile-update-form-controls > button:nth-child(2):hover{
+	background: #006363;
+}
+#change-password-or-email{
+	background: #fff;
+}
+.ccs-user-information ul > li .input-group-addon{
+    background-color: rgba(0,0,0,1);
+    border: 0;
+}
+.datepicker{
+    font-family: Arial, Verdana, sans-serif;
+    font-size: 12px;
+    border-radius: 0;
+}
+/*.datepicker{
+    color: #fff;
+    background-color: #000;
+}*/
+.ccs-user-information ul > li input{
+    border-radius: 0px;
+    border: 1px solid transparent;
+    background: rgba(0,0,0,0.1);
+}
+.ccs-user-information#account-info{
+	background: #fff;
+}
+.ccs-user-information#account-info > ul{
+	padding-bottom: 10px;
+}
+.ccs-user-information ul{
+	padding-bottom: 20px;
+}
+.ccs-user-information > i{
+	background-size: #222;
+}
+.ccs-user-information ul > li{
+	list-style: none;
+	color: #222;
+}
+.ccs-user-information > ul li:first-child{
+	font-size: 18px;
+}
+.ccs-user-recent-activities{
+	vertical-align: middle;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	height: inherit;
+}
+.ccs-user-recent-activities > ul{
+	padding: 0;
+}
+.ccs-user-recent-activities > ul li{
+	list-style: none;
+	display: inline;
+	color: #fff;
+	padding: 10px 10px;
+	border: 2px solid #fff;
+	cursor: pointer;
+}
+.ccs-user-recent-activities > ul li:not(:first-child){
+	margin-left: 5px;
+}
+.ccs-error, .ccs-not-available{
+    /*border-color: #ff5151;
+    box-shadow: 1px 0px 3px 0px #ffd3d3 !important;*/
+}
+.ccs-hidden{
+    visibility: hidden;
+}
+.ccs-user-profile-body-posts{
+	border-top: 5px solid #fff;	
+	position: relative;
+	background: #fff;
+	z-index: 3;
+}
+.ccs-user-profile-posts{
+	margin-left: 10px;
+	padding:10px 15px 15px 10px;
+	border-top: 5px solid rgba(0,0,0,0.2);
+	display: inline-block;
+}
+.ccs-user-profile-forum-posts{
+	border-top:1px solid #E7E7E7; 
+	border-left:1px solid #E7E7E7;  
+	padding: 5px 0;
+	margin-right: 5px;
+	padding-left: 25px;
+}
+/*@media (max-width: 395px){
+	.ccs-user-activities ul li:not(:first-child){
+		margin-left: 10px;
+	}
+	.ccs-user-activities ul{
+		padding-top: 10px;
+	}
+}
+*/
+#ccs-user-profile-edit, #ccs-user-profile-edit-cancel{
+    border-radius: 0;
+    color: #fff;
+    padding: 10px 15px;
+    background-color: #000;
+}
+#ccs-user-profile-edit:hover{
+    background-color: #101010;
+}/*
+.ccs-profile-image-container:after{
+    content: "";
+    height: 1px;
+    margin: 0 auto;
+    background: -moz-linear-gradient(left,  rgba(255,255,255,0) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 100%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,255,255,0)), color-stop(50%,rgba(255,255,255,1)), color-stop(100%,rgba(255,255,255,0)));
+    background: -webkit-linear-gradient(left,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 50%,rgba(255,255,255,0) 100%);
+    background: -o-linear-gradient(left,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 50%,rgba(255,255,255,0) 100%);
+    background: -ms-linear-gradient(left,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 50%,rgba(255,255,255,0) 100%);
+    background: linear-gradient(to right,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 50%,rgba(255,255,255,0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#00000000',GradientType=1 );
+    display: block;
+    width: 150px;
+}
+*/
+.ccs-user-profile-header-container .ccs-profile-image-container img{
+    padding: 3px;
+    background: #fff;
+    border-radius: 50%;
+    height: 168px;
+    width: 168px;
+}
+.ccs-user-profile-header-container {
+    display: inline;
+    position: relative;
+}
+.ccs-user-profile-picture{
+	position: relative;
+}
+.ccs-user-profile-header-container .ccs-user-profile-picture #ccs-profile-picture-dropdown{
+	position: absolute;
+	top: 65%;
+	right: 25px;
+}
+.ccs-user-profile-header-container .ccs-user-profile-picture #ccs-profile-picture-dropdown > a{
+	border: 6px solid rgb(255,116,23);
+	width: 50px;
+	height: 50px;
+	background: #fff;
+	font-size: 18px;
+	color: #FF7417;
+	border-radius: 50%;
+}
+.ccs-user-profile-header-container .ccs-user-profile-picture #ccs-profile-picture-dropdown .dropdown-menu{
+    border-radius: 0;
+    text-align: left;
+    font-size: 12px;
+    margin-top: -11px;
+    left: 10%;
+}
+.ccs-user-profile-header-container .options {
+    position: absolute;
+    bottom: 10px;
+    border-radius: 3px;
+    padding: 5px 10px;
+    /*font-weight: 900;*/
+    font-size: 11px;
+    left: 10%;
+    z-index: 2;
+    display: none;
+}
+.ccs-user-profile-header-container i.icon-spin{
+    position: absolute;
+    margin-top: 65px;
+    left: 11.88888889%;
+}
+.ccs-avatar-container{
+    cursor: pointer;
+}
+.ccs-avatar-container.selected{
+    border-top: 5px solid rgb(255,116,23);
+}
+.ccs-avatar div{
+    height: 115px;
+    width: 115px;
+}
+.www_FlowSlider_com-wrap-1{
+	background: #fff;
+}
+.ccs-user-profile-information{
+	background: #FF7417;
+	text-align: center;
+	padding: 15px 15px;
+}
+/*ANIMATIONS*/
+
+.ccs-user-personal-information{
+	display: inline-block;
+	vertical-align: top;
+}
+.ccs-user-personal-information > ul{
+	list-style: none;
+}
+.ccs-user-personal-information > ul > li{
+	color: rgba(255,255,255,1);
+	text-align: left;
+}
+.ccs-user-personal-information > ul li:first-child{
+	font-weight: bold;
+	font-size: 20px;
+	color: #fff;
+}
+.ccs-user-personal-information > ul li:nth-child(4){
+	background: #009999;
+	padding: 9px 5px 6px 0px;
+	position: relative;
+}
+.ccs-user-personal-information > ul li:nth-child(4) i{
+	background: #006363;
+	padding: 10px;
+}
+.ccs-user-personal-information .label-danger{
+	position: absolute;
+	border-radius: 0;
+	background: rgba(0,0,0,0.2);
+	top: 100%;
+	left: 0px;
+	right: 0;
+	cursor: pointer;
+}
+.ccs-user-personal-information .label-danger:hover{
+	background: green;
+	transition: all .25s ease 0s;
+	color: #fff;
+}
+/*
+.ccs-user-personal-information .btn-danger{
+	margin-top: -1px;
+	padding: 6px 5px 6px 5px;
+	vertical-align: top;
+	font-size: 11px;
+	display: inline-block;
+	background: #222;
+	cursor: pointer;
+	white-space: nowrap;
+	position: absolute;
+	top: -30px;
+	border-radius: 4px !important;
+	right: 0;
+	transition :all .25s ease 0s;
+}
+.ccs-user-personal-information .btn-danger:before{
+	position: absolute;
+	content: "";
+	width: 5px;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-top: 5px solid #222;
+	bottom: -5px;
+	right: 20px;
+}*/
+form[name="ccs-profile-personal-form"] label.ccs-error{
+	float: right;
+}
+	
+.css-profile-count-actions{
+	background: #333;
+}
+.css-profile-count-actions > ul{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.css-profile-count-actions > ul > li > a{
+	transition:all 0.25s ease 0s;
+	text-decoration: none;
+	cursor: pointer;
+	display: inline-flex;
+	padding: 13px 25px 8px 0;
+}
+.css-profile-count-actions > ul > li:not(:last-child){
+	
+}
+.css-profile-count-actions > ul > li > a > div{
+	text-align: center;
+}
+.css-profile-count-actions > ul > li > a > div:first-child{
+	font-size: 20px;
+	width: 120px;
+	min-width: 50px;
+	border-right: 1px solid rgba(238,238,238,.05);
+	color: #ff6000;
+}
+.css-profile-count-actions > ul > li > a > div:first-child > div:nth-child(2){
+	font-size: 12px;
+	color: rgba(255,255,255,.5);
+}
+.css-profile-count-actions > ul > li > a > div:nth-child(2){
+	font-size: 13px;
+	display: inline-block;
+	text-align: left;
+	padding-left: 10px;
+	padding-right: 10px;
+	vertical-align: bottom;
+	color: rgba(255,255,255,.5);
+}
+.css-profile-count-actions > ul > li > a.active{
+	background: #fff;
+	color: #222;
+}
+.ccs-profile-divider{
+	height: 18px;
+	background: rgba(238,238,238);
+	border-top: 1px solid rgb(223,223,223);
+	border-bottom: 1px solid rgb(223,223,223);
+}
+.css-profile-count-actions >ul > .active{
+	border-top: 4px solid #FF7417;
+}
+.css-profile-count-actions >ul > li > a:hover{
+	transition :all .3S ease 0s;
+	background: #fff;
+}
+.css-profile-count-actions > ul > li > a:hover i,
+.css-profile-count-actions > ul > li > a:hover > div > div:last-child{
+	transition :all .3S ease 0s;
+	color: #222;
+}
+
+.css-profile-count-actions >ul > li > a:hover > div:nth-child(2),
+.css-profile-count-actions >ul > .active > a > div:nth-child(2),
+.css-profile-count-actions > ul > li > a.active > div:nth-child(2),
+.css-profile-count-actions > ul > li > a.active i,
+.css-profile-count-actions > ul > li > a.active > div > div:last-child{
+	color: #222;
+	transition :all .3s ease 0s;
+}
+.ccs-profile-update-form-header{
+	font-size: 20px;
+	padding: 20px 40px;
+}
+.ccs-user-company-information{
+	border-top: 1px solid rgba(255,255,255,0.5);
+	/*display: none;*/
+}
+.ccs-user-company-information ul{
+	list-style: none;
+	padding: 10px 0;
+	color: #fff;
+}
+.open{
+	animation-name: flipInX; 
+	animation-duration: 0.4s; 
+	animation-fill-mode: both;
+	z-index: 1;
+}
+
+@-moz-keyframes flipInX {
+0% {
+    opacity: 0;
+    transform: perspective(400px) rotateX(90deg);
+}
+40% {
+    transform: perspective(400px) rotateX(-10deg);
+}
+70% {
+    transform: perspective(400px) rotateX(10deg);
+}
+100% {
+    opacity: 1;
+    transform: perspective(400px) rotateX(0deg);
+}
+}

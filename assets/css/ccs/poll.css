@@ -1,0 +1,471 @@
+.ccs-polls{
+	background: #f0f0f0;
+}
+.ccs-polls-title{
+	font-size: 15px;
+	color: #4C4F53;
+	padding: 5px 0;
+	padding-right: 5px;
+	background: #fff;
+}
+.ccs-polls-title label{
+	font-weight: normal !important;
+}
+.ccs-create-poll{
+	text-align: right;
+	background: #fff;
+}
+.ccs-btn-create-poll{
+	 background: none repeat scroll 0 0 #FFFFFF;
+	 border: 0;
+    border-bottom: 1px solid #CCCCCC;
+    color: #222222;
+    font-size: 15px;
+    margin-left: 20px;
+    padding: 0 8px 5px;
+    text-decoration: none;
+    position: relative;
+}
+.ccs-polls-author-container{
+	padding-right: 0px;
+	text-align: center;
+	background: #555;
+}
+.ccs-create-poll input{
+	font-size: 13px;
+	border: none;
+}
+.ccs-create-poll input[name="topic"]{
+	width: 250px;
+}
+.ccs-create-poll li{
+	list-style: none;
+}
+.ccs-create-poll > ul > li:first-child input{
+	padding: 10px 4px;
+}
+.ccs-create-poll > ul > li:last-child{
+	font-size: 12px;
+	padding: 0 0 10px 0;
+}
+.ccs-create-poll > ul > li:last-child div{
+	display: inline-block;
+	background: none;
+}
+.ccs-create-poll > ul > li:last-child{
+	text-align: center;
+}
+.ccs-create-poll > ul > li:last-child input{
+	border: none;
+	padding: 7px 12px;
+	background: #ff7417;
+	border: 1px solid #ff7417;
+	color: #fff;
+}
+.ccs-create-poll > ul > li:last-child input:hover{
+	background: #ea5e00;
+}
+.ccs-create-poll > ul > li:last-child input#ccs-create-poll-cancel{
+	background: #009999;
+	border: 1px solid #009999;
+}
+.ccs-create-poll > ul > li:last-child input#ccs-create-poll-cancel:hover{
+	background: #006363;
+}
+.ccs-create-poll > ul li:last-child > input[type="button"]:first-child{
+	border-right: 1px solid #b7b7b7;
+}
+.ccs-create-poll > ul,.ccs-create-poll > ul > li > ul{
+	padding: 0;
+	text-align: left;
+	margin-bottom: 0;
+}
+.ccs-create-poll{
+	padding: 0;
+	background-clip: padding-box;
+    background-color: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 2px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.176);
+    position: absolute;
+    top: 150%;
+    visibility: hidden;
+    left: 0;
+    margin-left: 44px;
+}
+.ccs-create-poll li{
+	transition: none;
+}
+.ccs-polls-controls{
+	padding: 0;
+	font-family: 'Open Sans';
+	background-clip: padding-box;
+    background-color: #FFFFFF;
+    border-left: 1px solid rgba(0, 0, 0, 0.15);
+    border-right: 1px solid rgba(0, 0, 0, 0.15);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 2px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.176);
+    position: absolute;
+    top: 99%;
+    visibility: hidden;
+    z-index: 2;
+    right: -1px;
+}
+
+.dropIt{
+	visibility: visible;
+	animation-name: flipInY;
+	animation-duration: .5s;
+    animation-fill-mode: both;
+    z-index: 100;
+}
+.dropItX{
+	visibility: visible;
+	animation-name: flipInX;
+	animation-duration: .5s;
+    animation-fill-mode: both;
+}
+.ccs-create-poll:before{
+	position: absolute;
+	content:"";
+	border-bottom: 8px solid #fff;
+	border-left: 8px solid transparent;
+	border-right: 8px solid transparent;
+	top: -8px;
+	left: 15px;
+	margin-left: -10px;
+}
+
+.ccs-create-poll-options{
+	padding: 5px 10px 5px 10px;
+	color: #fff;
+}
+.ccs-create-poll-options > ul li{
+	padding: 5px 10px;
+}
+.ccs-create-poll-options > ul > li:last-child span{
+	display: inline-block;
+	width: 40px;
+	text-align: center;
+	color: #d1d1d1;
+	height: 40px;
+	font-size: 23px;
+	border-radius: 50%;
+	border: 3px solid #d1d1d1;
+	cursor: pointer;
+}
+.ccs-add-new-poll-option{
+	font-size: 13px;
+	color: #d1d1d1;
+}
+.ccs-create-poll-options > ul > li:last-child span:hover,.ccs-add-new-poll-option{
+	border-color: #ff6000;
+	color: #ff6000
+}
+.ccs-create-poll-options > ul > li:last-child{
+	border-bottom: none;
+	text-align: center;
+	padding: 20px 0;
+}
+.ccs-create-poll-options > ul li{
+	/*position: relative;*/
+}
+.ccs-create-poll-options > ul li input[type="text"]{
+	background: transparent;
+	color: #757575;
+	padding: 5px;
+	background: none repeat scroll 0 0 #EEEEEE;
+    border-radius: 0;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0), 0 0 0 1px #E3E3E3 inset;
+	width: 100%;
+}
+*::-moz-placeholder {
+    color: #000;
+}
+.ccs-create-poll-options > ul li input[type="button"]{
+	background: #fff;
+	border: 0;
+}
+.ccs-create-poll-options > ul > li > span.remove{
+	color: #000000;
+    font-size: 9px;
+    margin-top: -5px;
+    padding: 12px 8px;
+    position: absolute;
+    right: -36px;
+    z-index: 1;
+    background: #999;
+}
+.ccs-create-poll-options > ul > li > span.remove:before{
+	position: absolute;
+	content: '';
+	border-top: 18px solid transparent;
+	border-bottom: 18px solid transparent;
+	border-right: 18px solid #999;
+	border-left: 0;
+	right: 100%;
+    margin-right: 0;
+    top: 1px;
+}
+.ccs-create-poll-options > ul > li > span.remove > i:hover{
+	cursor: pointer;
+}
+.ccs-create-poll-topic{
+	padding: 10px;
+}
+.ccs-create-poll-topic > .bfh-datepicker{
+	position: relative;
+	z-index: 2;
+}
+.ccs-create-poll-topic .bfh-datepicker .bfh-datepicker-toggle{
+	margin-top: 10px;
+}
+.ccs-create-poll-topic .bfh-timepicker .bfh-timepicker-toggle{
+	margin-top: 10px;
+}
+.ccs-create-poll-topic .bfh-datepicker .input-group-addon{
+	border: none;
+}
+.ccs-create-poll-topic .bfh-datepicker input{
+	border-bottom: 1px solid #eee;
+}
+.ccs-create-poll-topic .bfh-timepicker > .bfh-timepicker-toggle > .input-group-addon{
+	border: none;
+}
+.ccs-create-poll-topic .bfh-timepicker input{
+	border-bottom: 1px solid #eee;
+}
+.ccs-create-poll-topic > .bfh-datepicker > .bfh-datepicker-calendar{
+	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.176);
+	border: 1px solid #d3d5d9;
+	left: -100px;
+}
+.ccs-create-poll-topic .bfh-datepicker >.bfh-datepicker-calendar > table{
+	min-width: 0;
+	margin-bottom: 0 !important;
+}
+@-moz-keyframes flipInY {
+0% {
+    opacity: 0;
+    transform: perspective(400px) rotateY(90deg);
+}
+40% {
+    transform: perspective(400px) rotateY(-10deg);
+}
+70% {
+    transform: perspective(400px) rotateY(10deg);
+}
+100% {
+    opacity: 1;
+    transform: perspective(400px) rotateY(0deg);
+}
+}
+
+
+/*POLL MEDIA*/
+.ccs-votes-progress-bar-container{
+	height: 15px;
+	background: none repeat scroll 0 0 #EEEEEE;
+    border-radius: 0;
+    width: 100%;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0), 0 0 0 1px #E3E3E3 inset;
+}	
+.ccs-votes-progress-bar{
+	height: inherit;
+	background: rgba(255,116,23,0.14);
+}
+.ccs-polls-body{
+	padding-bottom: 30px;
+	margin: 0 10px;
+}
+.ccs-polls-body .ccs-polls-media:not(:first-child){
+	
+}
+.ccs-polls-media{
+	color: #fff;
+	margin-bottom: 20px;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+	vertical-align: top;
+}
+
+.ccs-polls-author{
+	display: inline-block;
+	vertical-align: middle;
+	border-right: 1px dotted #C7C7C7;
+	padding: 0 5px 0 0;
+}
+/*.ccs-polls-medium{
+	display: inline-block;
+}*/
+.ccs-polls-author-name{
+	font-size: 12px;
+}
+.ccs-polls-author-user-type{
+
+}
+.ccs-polls-user-profile-picture{
+	display: inline-block;
+	padding: 5px;
+	vertical-align: middle;
+	width: 80px;
+	text-align: center;
+}
+.ccs-polls-user-profile-picture img{
+	height: 50px;	
+	border: 2px solid #eaeaea;
+	width: 50px;
+	border-radius: 50%;
+}
+.ccs-polls-time-posted{
+	font-size: 10px;
+	border-bottom: 1px solid rgba(255,255,255,0.2);	
+	color: #fff;
+	padding: 6px 11px;
+	background: #ff6000;
+	padding-top: 0;
+}
+.ccs-polls-question{
+	font-size: 18px;
+	padding: 6px 11px;
+	padding-bottom: 0;
+	position: relative;
+	padding-right: 50px;
+	color: #fff;
+	z-index: 2;
+	background: #ff6000;
+}
+.ccs-polls-question .ic-cog{
+	height: 25px;
+	width: 30px;
+	text-align: center;
+	padding-top: 5px; 
+}
+.ccs-polls-options{
+	background: #fff;
+	min-height: 178px;
+	border: 1px solid #d3d5d9;
+}
+.ccs-polls-options li{
+	list-style: none;
+}
+.ccs-polls-options ul{
+	font-size: 13px;
+	padding: 5px 0;
+	margin: 0;
+	color: #222;
+	text-align: left;
+}
+.ccs-polls-options ul li{
+	padding: 5px 10px;
+}
+.ccs-polls-options ul li:not(:first-child){
+	/*position: relative;*/
+}
+.ccs-polls-options ul li:not(:first-child) > i {
+	color: #E3E3E3;
+ 	border-radius: 50%;
+	font-size: 15px;
+}
+.ccs-polls-options ul li:not(:first-child) > span.icon-stack{
+	color: #ff6000;
+}
+.ccs-polls-options ul li:not(:first-child) i:hover{
+	cursor: pointer;
+}
+.ccs-polls-options-votes{
+	display: inline-block;
+	
+}
+.ccs-polls-options-votes ul li{
+	font-size: 20px;
+	text-align: center;
+}
+.ccs-polls-options-answers{
+	position: relative;
+	z-index: 1;
+}
+.ccs-polls-options-answers >ul li:first-child,.ccs-polls-options-votes >ul li:first-child{
+	font-size: 11px;
+}
+.ccs-polls-options-answers >ul li{
+	position: relative;
+}
+.x40{
+	font-size: 14px;
+}
+
+.ccs-polls-controls ul{
+	padding: 0;
+	color: #333;
+	margin-bottom: 0;
+}
+.ccs-polls-controls > ul li{
+	list-style: none;
+	font-size: 12px;
+	padding: 7px 20px;	
+	position: relative;
+	transition: none;
+}
+.ccs-polls-controls > ul li:hover{
+	color: #fff;
+	background: rgb(255,145,21);
+	cursor: pointer;
+}
+.clicked{
+	background-color: #fff;
+	color: #333;
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+	border: 2px 2px 0 0;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.176);
+    animation-name: flipInY;
+    animation-fill-mode: both;
+}
+
+.ccs-polls-media-no-post{
+	background: #fff !important;
+	color: #000;
+    border-top: 1px solid #E7E7E7;
+    height: 50px;
+    padding-top: 10px;
+    text-align: center;
+}
+
+#poll-timer{
+	float: right;
+}
+
+/* timepicker */
+.bfh-number-btn{
+	border-radius: 0;
+}
+.bfh-number-btn:hover{
+	cursor: pointer;
+}
+.bfh-timepicker-popover .separator{
+	padding-left: 20px;
+}
+.bfh-datepicker span.input-group-addon,
+.bfh-timepicker span.input-group-addon{
+	border-radius: 0;
+}
+.bfh-datepicker-toggle > input,
+.bfh-timepicker-toggle > input{
+	width: 100%;
+}
+.bfh-datepicker-toggle > input:hover,
+.bfh-datepicker-toggle > span:hover,
+.bfh-timepicker-toggle > input:hover,
+.bfh-timepicker-toggle > span:hover{
+	cursor: pointer;
+}
+.bfh-selectbox .bfh-selectbox-options{
+	border-top: 0;
+	margin: 1px -2px 0 0 ;
+	right: 0;
+	border-radius: 0;
+}
+.ccs-polls-body > .Closed{
+	opacity: .3;
+}
