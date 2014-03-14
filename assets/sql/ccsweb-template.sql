@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Mar 12, 2014 at 11:38 AM
+-- Generation Time: Mar 13, 2014 at 02:39 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -51,35 +51,13 @@ CREATE TABLE IF NOT EXISTS `ccs_captcha` (
   `word` varchar(20) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `word` (`word`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=23 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 --
 -- Dumping data for table `ccs_captcha`
 --
 
-INSERT INTO `ccs_captcha` (`id`, `time`, `ip_address`, `word`) VALUES
-(1, 1394619773, '::1', 'zDTKYE5C'),
-(2, 1394619808, '::1', 'v9DfFk6Y'),
-(3, 1394619911, '::1', 'VpB0A6f4'),
-(4, 1394619932, '::1', 'tfOdBfcd'),
-(5, 1394619957, '::1', 'CQi1odMZ'),
-(6, 1394619981, '::1', 'QWdLWL19'),
-(7, 1394620016, '::1', 'K78SA9En'),
-(8, 1394620041, '::1', 'GBltRnZc'),
-(9, 1394620079, '::1', 'SNR73DFH'),
-(10, 1394620189, '::1', 'tPMiUfDT'),
-(11, 1394620214, '::1', 'MTNL5u9m'),
-(12, 1394620253, '::1', 'oO41swJ2'),
-(13, 1394620269, '::1', 'GjcbF7pv'),
-(14, 1394620272, '::1', 'grwtr2p1'),
-(15, 1394620313, '::1', 'OFG7cX7t'),
-(16, 1394620333, '::1', 'nMsoPgY7'),
-(17, 1394620384, '::1', 'Pu13JVZc'),
-(18, 1394620422, '::1', 'dL2tovTx'),
-(19, 1394620607, '::1', 'PQFBm6iX'),
-(20, 1394620637, '::1', 'fGNEBHIj'),
-(21, 1394620694, '::1', 'lyw2Ow3p'),
-(22, 1394620694, '::1', 'T0kSn1Xp');
+
 
 -- --------------------------------------------------------
 
@@ -274,7 +252,14 @@ CREATE TABLE IF NOT EXISTS `ccs_nonmoodle_user` (
   `lastlogin` datetime NOT NULL,
   `lastlogout` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `ccs_nonmoodle_user`
+--
+
+INSERT INTO `ccs_nonmoodle_user` (`id`, `firstname`, `middlename`, `lastname`, `validemail`, `email`, `confirmationcode`, `secretquestion`, `secretanswer`, `username`, `password`, `birthdate`, `profilepicture`, `usertype`, `datecreated`, `lastlogin`, `lastlogout`) VALUES
+(1, 'Steven', NULL, 'Pila', 0, 'stevenpilafour169@gmail.com', NULL, 1, 'ashley', 'stevenpila', '$2y$10$DQe3uZJGltCc7hEISvJfse8h7WJJm.PJcreUcHWVxcO7UD3HRSntS', NULL, 'assets/img/default_profile_picture.jpg', 1, '2014-03-13 08:55:33', '2014-03-13 08:55:33', NULL);
 
 -- --------------------------------------------------------
 
@@ -371,25 +356,24 @@ CREATE TABLE IF NOT EXISTS `ccs_services` (
   `name` varchar(100) NOT NULL,
   `url` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=43 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=12 ;
 
 --
 -- Dumping data for table `ccs_services`
 --
 
 INSERT INTO `ccs_services` (`id`, `name`, `url`) VALUES
-(1, 'Resume maker', 'wtf'),
+(1, 'Resume maker', NULL),
 (2, 'Graduate Tracer', NULL),
-(3, 'Student Portfolio', 'hahaha'),
-(4, 'Job Finder', 'ambot'),
-(5, 'Job Matcher', 'job matcher'),
+(3, 'Student Portfolio', NULL),
+(4, 'Job Finder', NULL),
+(5, 'Job Matcher', NULL),
 (6, 'IT Company Profiler', NULL),
 (7, 'Learning Object CMS', NULL),
-(8, 'school automate', 'http://172.31.11.212'),
-(11, 'SP Documentation Managerxxssssssssssssssss', 'wwtf'),
-(31, 'sure oists', NULL),
-(33, 'Test', NULL),
-(34, 'asd', NULL);
+(8, 'Learning Object Organizer', NULL),
+(9, 'Learning Object Account Management', NULL),
+(10, 'SP Indexer', NULL),
+(11, 'SP Documentation Manager', NULL);
 
 -- --------------------------------------------------------
 
@@ -450,7 +434,20 @@ CREATE TABLE IF NOT EXISTS `ccs_user_types` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(100) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
+
+--
+-- Dumping data for table `ccs_user_types`
+--
+
+INSERT INTO `ccs_user_types` (`id`, `name`) VALUES
+(1, 'Super Administrator'),
+(2, 'Administrator'),
+(3, 'Employee'),
+(4, 'Faculty'),
+(5, 'Alumni'),
+(6, 'Student'),
+(7, 'Guest');
 
 -- --------------------------------------------------------
 
