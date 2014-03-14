@@ -72,10 +72,9 @@ $(document).ready(function(){
             dataType: 'json',
             success: function(output){
                 if(output.status){
-                    var group = $('.ccs-announcement');
-                    var list = $('.ccs-announcement-media', group).last().index();
+                    var list = $('.ccs-announcement > div.ccs-announcement-media').length;
 
-                    if(list > 2){
+                    if(list > 1){
                         $('.ccs-announcement > .media.ccs-announcement-media[data-value="' + value + '"]').slideUp(function(){
                             $(this).remove();
                         });
